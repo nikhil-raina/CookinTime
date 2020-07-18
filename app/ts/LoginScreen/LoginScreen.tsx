@@ -46,6 +46,9 @@ export default class LoginScreen extends React.Component<{}, {}> {
             </Text>
           </View>
           <View style={styles.logosContainer}>
+            {/* TODO: Make these Logos clickable.
+            Try using the Touchable Opacity. After clicking them, they need
+            to go to the respective ways of logging into the app. */}
             <View style={styles.imageContainer}>
               <Image  source={facebookLogo}
                       style={styles.logoStyle}/>
@@ -74,12 +77,16 @@ export default class LoginScreen extends React.Component<{}, {}> {
             </Text>
             <View style={{flexDirection:'row'}}>
               <Text style={styles.termsAndConditionsTextContainer}>
-                {'Privacy Notice'}
+                {/* TODO: Need to make this as a hyperlink that takes the user to the
+                Document that goes about showing the Privacy Notices */}
+                {'Privacy Notices'}
               </Text>
               <Text style={styles.otherTextContainer}>
                 {' and '}
               </Text>
               <Text style={styles.termsAndConditionsTextContainer}>
+                {/* TODO: Need to make this as a hyperlink that takes the user to the
+                Document that goes about showing the Terms of Use */}
                 {'Terms of Use'}
               </Text>
             </View>
