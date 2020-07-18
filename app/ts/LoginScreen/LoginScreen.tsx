@@ -72,7 +72,6 @@ export default class LoginScreen extends React.Component<{}, {}> {
             <Text style={styles.otherTextContainer}>
               {'By continuing, you agree to our'}
             </Text>
-            
             <View style={{flexDirection:'row'}}>
               <Text style={styles.termsAndConditionsTextContainer}>
                 {'Privacy Notice'}
