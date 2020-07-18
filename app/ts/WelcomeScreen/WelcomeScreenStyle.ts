@@ -7,7 +7,7 @@
 import {
   StyleSheet,
   Dimensions,
-  Platform, 
+  Platform,
 } from 'react-native';
 
 
