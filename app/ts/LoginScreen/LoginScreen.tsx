@@ -1,4 +1,5 @@
 /* eslint-disable prettier/prettier */
+/* eslint-disable react-native/no-inline-styles */
 /**
  * @providesModule LoginScreen
  * @flow
@@ -6,84 +7,86 @@
 
 import React from 'react';
 import styles from './LoginScreenStyle';
+import images from '../CIT-Modules/ImageTree';
 
 import {
   View,
+  Image,
   Text,
-  Button,
-  TextInput,
-  KeyboardAvoidingView,
-  Keyboard,
+  ImageBackground,
 } from 'react-native';
 
-interface State {
-  userNameText: string
-}
-export default class LoginScreen extends React.Component<{}, State> {
+export default class LoginScreen extends React.Component<{}, {}> {
 
-  constructor(props: any){
+  constructor(props: any) {
     super(props);
-    this.state = {
-      userNameText: '',
-    };
-  }
-
-  _doesUserNameExists = () => {
-    const username = this.state.userNameText;
-    if (this._isValid(username)) {
-      //  TODO send the username to the data base and check if it exists.
-      //  TODO 1. Get the data and populate the other screens if it exists.
-      //  TODO 2. Show a modal saying that the candidate doesn't exists
-      //  "Sorry, such a candidate hasn't registered with us, yet..."
-    } else {
-      // TODO Show a modal saying that the username entered is invalid
-      // "The username entered is invalid. Please check again."
-    }
-    setTimeout(() => {
-      Keyboard.dismiss();
-      this.setState({
-        userNameText: '',
-      });
-    }, 150);  // The delay is for it to look realistically smooth
-  }
-
-  _setUserName(value: string) {
-    this.setState({
-      userNameText: value,
-    });
-  }
-
-  _isValid(text: string) {
-    // eslint-disable-next-line no-useless-escape
-    return !/[~` !#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?]/g.test(text);
   }
 
   render(): React.ReactElement {
-    const headerText = 'Enter Username below to get some Info on the Candidate';
+    const background_image = images.login_background;
+    const facebookLogo = images.login_facebook_logo;
+    const emailLogo = images.login_email_logo;
+    const googleLogo = images.login_google_logo;
+    const headerDialogue = 'Kitchen awaits you!!';
+    const firstLineMessage = 'To get a personalized experience, ';
+    const secondLineMessage = 'please sign in with:';
     return (
-      <KeyboardAvoidingView  enabled={true}
-                             behavior={'padding'}
-                             style={styles.MainContainer}>
-        <View style={styles.headerContainer}>
-          <Text style={styles.headerTextStyle}>
-            {headerText}
+      <ImageBackground  source={background_image}
+                        style={styles.backgroundImage}>
+        <View style={styles.container}>
+          <Text style={styles.headerTextContainer}>
+            {headerDialogue}
           </Text>
-        </View>
-        <View style={styles.contextContainer}>
-            <Text style={styles.titleText}>
-              {'Username:'}
+          <View style={styles.messageContainer}>
+            <Text style={styles.inLineTextContainer}>
+              {firstLineMessage}
             </Text>
-            <TextInput  style={styles.usernameTextStyle}
-                        placeholder={'Candidate\'s username'}
-                        onChangeText={(value) => this._setUserName(value)}
-                        clearButtonMode={'always'}/>
+            <Text style={styles.inLineTextContainer}>
+              {secondLineMessage}
+            </Text>
+          </View>
+          <View style={styles.logosContainer}>
+            <View style={styles.imageContainer}>
+              <Image  source={facebookLogo}
+                      style={styles.logoStyle}/>
+              <Text style={styles.logoTextContainer}>
+                {'Facebook'}
+              </Text>
+            </View>
+            <View style={styles.imageContainer}>
+              <Image  source={googleLogo}
+                      style={styles.logoStyle}/>
+              <Text style={styles.logoTextContainer}>
+                {'Google'}
+              </Text>
+            </View>
+            <View style={styles.imageContainer}>
+              <Image  source={emailLogo}
+                      style={styles.logoStyle}/>
+              <Text style={styles.logoTextContainer}>
+                {'Email'}
+              </Text>
+            </View>
+          </View>
+          <View style={styles.termsAndConditionsContainer}>
+            <Text style={styles.otherTextContainer}>
+              {'By continuing, you agree to our'}
+            </Text>
+            
+            <View style={{flexDirection:'row'}}>
+              <Text style={styles.termsAndConditionsTextContainer}>
+                {'Privacy Notice'}
+              </Text>
+              <Text style={styles.otherTextContainer}>
+                {' and '}
+              </Text>
+              <Text style={styles.termsAndConditionsTextContainer}>
+                {'Terms of Use'}
+              </Text>
+            </View>
+          </View>
         </View>
-        <View style={styles.buttonContainer}>
-          <Button title={'Get Info'}
-                  onPress={this._doesUserNameExists}
-                  color={'#0F0403'}/>
-        </View>
-      </KeyboardAvoidingView>
+      </ImageBackground>
     );
   }
 }
