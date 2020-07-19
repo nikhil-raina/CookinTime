@@ -40,9 +40,7 @@ export default StyleSheet.create({
     color: '#F2E6C2',
   },
 
-  logoStyle: {
-    height: 60,
-    width: 60,
+  dropShadow: {
     ...Platform.select({
       ios: {
         shadowColor: '#000',
@@ -54,9 +52,14 @@ export default StyleSheet.create({
         shadowRadius: 5,
       },
       android: {
-        elevation: 10,
+        elevation: 20,
       },
     }),
+  },
+
+  logoStyle: {
+    height: 60,
+    width: 60,
   },
 
   headerTextContainer: {
@@ -64,7 +67,7 @@ export default StyleSheet.create({
     fontFamily: 'JosefinSans-Medium',
     fontSize: 34,
     color: '#F2E6C2',
-    marginBottom: 10,
+    marginBottom: 60,
   },
 
   messageContainer: {
