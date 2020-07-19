@@ -4,63 +4,98 @@
  * @flow
  */
 
-import {StyleSheet} from 'react-native';
+import {
+  StyleSheet,
+  Dimensions,
+  Platform,
+} from 'react-native';
+
 
 export default StyleSheet.create({
-  MainContainer: {
-    flex: 1,
-    backgroundColor: '#F2E6C2',
+  container: {
     alignItems: 'center',
-    justifyContent: 'center',
   },
 
-  textStyleHeading: {
-    fontSize: 40,
-    color: '#002942',
+  backgroundImage: {
+    height: Dimensions.get('window').height,
+    width: Dimensions.get('window').width,
+    backgroundColor: 'rgba(0,0,0,0.6)',
+
   },
 
-  textStyleSubHeading: {
-    paddingTop: 5,
-    fontSize: 25,
-    color: '#5F6B6E',
-    padding: 30,
+  logosContainer: {
+    width: 230,
+    flexDirection: 'row',
+    marginBottom: 50,
   },
 
-  headerContainer: {
-    flex: 0.5,
-    width: 300,
+  imageContainer: {
+    alignItems: 'center',
+    flex: 1,
   },
 
-  headerTextStyle: {
-    fontSize: 38,
-    fontWeight: '600',
-    textAlign: 'center',
-    padding: 10,
+  logoTextContainer: {
+    fontFamily: 'JosefinSans-Light',
+    fontSize: 10,
+    color: '#F2E6C2',
   },
 
-  titleText: {
-    fontSize: 20,
-    paddingBottom: 10,
+  dropShadow: {
+    ...Platform.select({
+      ios: {
+        shadowColor: '#000',
+        shadowOffset: {
+          width: 0,
+          height: 2,
+        },
+        shadowOpacity: 0.8,
+        shadowRadius: 5,
+      },
+      android: {
+        elevation: 20,
+      },
+    }),
   },
 
-  buttonContainer: {
-    backgroundColor: '#D6D011',
-    borderWidth: 1.5,
-    borderRadius: 10,
-    width: 200,
-    height: 50,
-    justifyContent: 'center',
+  logoStyle: {
+    height: 60,
+    width: 60,
   },
 
-  contextContainer: {
-    flex: 0.15,
+  headerTextContainer: {
+    paddingTop: 60,
+    fontFamily: 'JosefinSans-Medium',
+    fontSize: 34,
+    color: '#F2E6C2',
+    marginBottom: 60,
   },
 
-  usernameTextStyle: {
-    borderWidth: 1,
-    borderColor: '#454E59',
-    padding: 8,
-    width: 300,
-    fontSize: 16,
+  messageContainer: {
+    alignItems: 'center',
+    marginBottom: 30,
+  },
+
+  termsAndConditionsContainer: {
+    alignItems: 'center',
+  },
+
+  otherTextContainer: {
+    fontFamily: 'JosefinSans-Light',
+    fontSize: 10,
+    color: '#F2E6C2',
+  },
+
+  termsAndConditionsTextContainer: {
+    fontFamily: 'JosefinSans-Light',
+    fontSize: 10,
+    color: '#F2E6C2',
+    fontWeight: 'bold',
+    textDecorationLine: 'underline',
+  },
+
+  inLineTextContainer: {
+    fontFamily: 'JosefinSans-Light',
+    fontSize: 18,
+    color: '#F2E6C2',
   },
 });

@@ -21,13 +21,11 @@ export default StyleSheet.create({
   backgroundImage: {
     height: Dimensions.get('window').height,
     width: Dimensions.get('window').width,
-    backgroundColor: 'rgba(0,0,0,0.5)',
+    backgroundColor: 'rgba(0,0,0,0.6)',
 
   },
 
   logoContainer: {
-    height: '15%',
-    width: '28%',
     borderRadius: 25,
     ...Platform.select({
       ios: {
@@ -40,14 +38,14 @@ export default StyleSheet.create({
         shadowRadius: 5,
       },
       android: {
-        elevation: 10,
+        elevation: 20,
       },
     }),
   },
 
   logoStyle: {
-    height: '100%',
-    width: '100%',
+    height: 110,
+    width: 110,
     borderRadius: 25,
   },
 
