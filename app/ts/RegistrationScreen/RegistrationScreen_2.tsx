@@ -36,34 +36,32 @@ export default class RegistrationScreen_2 extends React.Component<{}, {}> {
             <Image  source={defaultProfilePicture}
                     style={styles.logoStyle}/>
           </View>
-          <View style={styles.credentialContainer}>
+          <View style={styles.credentialsContainer}>
             <View style={styles.nameContainer}>
-              <View style={styles.credentialTextContainer}>
-                <Text style={styles.credentialHeaderText}>
-                  {nameText}
-                </Text>
-              </View>
+              <Text style={styles.credentialHeaderText}>
+                {nameText}
+              </Text>
               <View style={styles.replyTextContainer}>
                 <TextInput  keyboardType={'default'}
                             style={styles.textStyle}
-                            underlineColorAndroid={'#F2E6C2'}/>
+                            underlineColorAndroid={'#F2E6C2'}
+                            value={'Nikhil Raina'}/>
               </View>
             </View>
             <View>
-              <View style={styles.credentialTextContainer}>
-                <Text style={styles.credentialHeaderText}>
-                  {contactText}
-                </Text>
-              </View>
+              <Text style={styles.credentialHeaderText}>
+                {contactText}
+              </Text>
               <View style={styles.replyTextContainer}>
-                <TextInput  keyboardType={'default'}
+                <TextInput  keyboardType={'numeric'}
                             style={styles.textStyle}
-                            underlineColorAndroid={'#F2E6C2'}/>
+                            underlineColorAndroid={'#F2E6C2'}
+                            value={'1234567890'}/>
               </View>
             </View>
           </View>
           <View>
-            <Text style={styles.textStyle}>
+            <Text style={[styles.textStyle, {fontFamily: 'JosefinSans-SemiBold', fontSize: 20}]}>
               {'NEXT'}
             </Text>
           </View>

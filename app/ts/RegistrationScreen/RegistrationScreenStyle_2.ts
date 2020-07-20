@@ -23,37 +23,40 @@ export default StyleSheet.create({
   },
 
   logoStyle: {
-    height: 120,
-    width: 120,
+    height: 140,
+    width: 140,
   },
 
   imageContainer: {
-    marginTop: 100,
+    marginTop: 70,
     marginBottom: 30,
   },
 
-  credentialContainer: {
-    flex:0.35,
+  credentialsContainer: {
+    marginBottom: 40,
+    width: 280,
   },
 
   replyTextContainer: {
-
+    paddingLeft: 5,
   },
 
   credentialHeaderText: {
-
-  },
-
-  credentialTextContainer: {
+    color: '#F2D750',
+    fontFamily: 'JosefinSans-Light',
+    fontSize: 14,
 
   },
 
   nameContainer: {
-
+    marginBottom: 25,
   },
 
   textStyle: {
-
+    fontFamily: 'JosefinSans-Regular',
+    fontSize: 18,
+    color: '#F2E6C2',
+    
   },
 
 
