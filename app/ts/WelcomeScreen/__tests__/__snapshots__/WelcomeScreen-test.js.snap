@@ -14,7 +14,7 @@ exports[`Rendering basic demo screen renders correctly 1`] = `
   <Image
     source={
       Object {
-        "testUri": "../../../assets/images/WelcomeScreen/background/drawable-hdpi/welcomeScreen-background.png",
+        "testUri": "../../../assets/images/WelcomeScreen/drawable-hdpi/WelcomeScreen-Background.png",
       }
     }
     style={
@@ -44,23 +44,42 @@ exports[`Rendering basic demo screen renders correctly 1`] = `
     }
   >
     <View
+      accessibilityIgnoresInvertColors={true}
       style={
         Object {
-          "borderRadius": 25,
-          "shadowColor": "#000",
-          "shadowOffset": Object {
-            "height": 2,
-            "width": 0,
-          },
-          "shadowOpacity": 0.8,
-          "shadowRadius": 5,
+          "alignItems": "center",
+          "height": 135,
+          "width": 135,
         }
       }
     >
       <Image
         source={
           Object {
-            "testUri": "../../../assets/images/WelcomeScreen/welcomeScreen-logo.png",
+            "testUri": "../../../assets/images/WelcomeScreen/drawable-hdpi/WelcomeScreen-LogoShadow.png",
+          }
+        }
+        style={
+          Array [
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            },
+            Object {
+              "height": 135,
+              "width": 135,
+            },
+            undefined,
+          ]
+        }
+      />
+      <Image
+        source={
+          Object {
+            "testUri": "../../../assets/images/WelcomeScreen/WelcomeScreen-Logo.png",
           }
         }
         style={

@@ -14,7 +14,7 @@ exports[`Rendering basic demo screen renders correctly 1`] = `
   <Image
     source={
       Object {
-        "testUri": "../../../assets/images/LoginScreen/loginScreen-background.png",
+        "testUri": "../../../assets/images/LoginScreen/drawable-hdpi/LoginScreen_Background.png",
       }
     }
     style={
@@ -103,22 +103,42 @@ exports[`Rendering basic demo screen renders correctly 1`] = `
         }
       >
         <View
+          accessibilityIgnoresInvertColors={true}
           style={
             Object {
-              "shadowColor": "#000",
-              "shadowOffset": Object {
-                "height": 2,
-                "width": 0,
-              },
-              "shadowOpacity": 0.8,
-              "shadowRadius": 5,
+              "alignItems": "center",
+              "height": 75,
+              "width": 75,
             }
           }
         >
           <Image
             source={
               Object {
-                "testUri": "../../../assets/images/LoginScreen/facebook-logo.png",
+                "testUri": "../../../assets/images/LoginScreen/drawable-hdpi/LoginScreen-Facebook_LogoShadow.png",
+              }
+            }
+            style={
+              Array [
+                Object {
+                  "bottom": 0,
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                },
+                Object {
+                  "height": 75,
+                  "width": 75,
+                },
+                undefined,
+              ]
+            }
+          />
+          <Image
+            source={
+              Object {
+                "testUri": "../../../assets/images/LoginScreen/LoginScreen-Facebook_Logo.png",
               }
             }
             style={
@@ -150,22 +170,42 @@ exports[`Rendering basic demo screen renders correctly 1`] = `
         }
       >
         <View
+          accessibilityIgnoresInvertColors={true}
           style={
             Object {
-              "shadowColor": "#000",
-              "shadowOffset": Object {
-                "height": 2,
-                "width": 0,
-              },
-              "shadowOpacity": 0.8,
-              "shadowRadius": 5,
+              "alignItems": "center",
+              "height": 75,
+              "width": 75,
             }
           }
         >
           <Image
             source={
               Object {
-                "testUri": "../../../assets/images/LoginScreen/google-logo.png",
+                "testUri": "../../../assets/images/LoginScreen/drawable-hdpi/LoginScreen-Gmail_LogoShadow.png",
+              }
+            }
+            style={
+              Array [
+                Object {
+                  "bottom": 0,
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                },
+                Object {
+                  "height": 75,
+                  "width": 75,
+                },
+                undefined,
+              ]
+            }
+          />
+          <Image
+            source={
+              Object {
+                "testUri": "../../../assets/images/LoginScreen/LoginScreen-Gmail_Logo.png",
               }
             }
             style={
@@ -197,22 +237,42 @@ exports[`Rendering basic demo screen renders correctly 1`] = `
         }
       >
         <View
+          accessibilityIgnoresInvertColors={true}
           style={
             Object {
-              "shadowColor": "#000",
-              "shadowOffset": Object {
-                "height": 2,
-                "width": 0,
-              },
-              "shadowOpacity": 0.8,
-              "shadowRadius": 5,
+              "alignItems": "center",
+              "height": 75,
+              "width": 75,
             }
           }
         >
           <Image
             source={
               Object {
-                "testUri": "../../../assets/images/LoginScreen/email-logo.png",
+                "testUri": "../../../assets/images/LoginScreen/drawable-hdpi/LoginScreen-Email_LogoShadow.png",
+              }
+            }
+            style={
+              Array [
+                Object {
+                  "bottom": 0,
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                },
+                Object {
+                  "height": 75,
+                  "width": 75,
+                },
+                undefined,
+              ]
+            }
+          />
+          <Image
+            source={
+              Object {
+                "testUri": "../../../assets/images/LoginScreen/LoginScreen-Email_Logo.png",
               }
             }
             style={

@@ -14,7 +14,7 @@ exports[`Rendering basic demo screen renders correctly 1`] = `
   <Image
     source={
       Object {
-        "testUri": "../../../assets/images/RegistrationScreen/Registration_Screen_background.png",
+        "testUri": "../../../assets/images/RegistrationScreen/drawable-hdpi/RegistrationScreen-Background.png",
       }
     }
     style={
@@ -50,19 +50,53 @@ exports[`Rendering basic demo screen renders correctly 1`] = `
         }
       }
     >
-      <Image
-        source={
-          Object {
-            "testUri": "../../../assets/images/RegistrationScreen/defaultProfilePicture.png",
-          }
-        }
+      <View
+        accessibilityIgnoresInvertColors={true}
         style={
           Object {
-            "height": 140,
-            "width": 140,
+            "alignItems": "center",
+            "height": 160,
+            "width": 150,
           }
         }
-      />
+      >
+        <Image
+          source={
+            Object {
+              "testUri": "../../../assets/images/RegistrationScreen/drawable-hdpi/RegistrationScreen-ProfilePictureShadow.png",
+            }
+          }
+          style={
+            Array [
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              Object {
+                "height": 160,
+                "width": 150,
+              },
+              undefined,
+            ]
+          }
+        />
+        <Image
+          source={
+            Object {
+              "testUri": "../../../assets/images/RegistrationScreen/RegistrationScreen-ProfilePicture.png",
+            }
+          }
+          style={
+            Object {
+              "height": 140,
+              "width": 140,
+            }
+          }
+        />
+      </View>
     </View>
     <View
       style={
