@@ -1,0 +1,175 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rendering basic demo screen renders correctly 1`] = `
+<View
+  accessibilityIgnoresInvertColors={true}
+  style={
+    Object {
+      "backgroundColor": "rgba(0,0,0,0.6)",
+      "height": 1334,
+      "width": 750,
+    }
+  }
+>
+  <Image
+    source={
+      Object {
+        "testUri": "../../../assets/images/RegistrationScreen/Registration_Screen_background.png",
+      }
+    }
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {
+          "height": 1334,
+          "width": 750,
+        },
+        undefined,
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "marginBottom": 30,
+          "marginTop": 70,
+        }
+      }
+    >
+      <Image
+        source={
+          Object {
+            "testUri": "../../../assets/images/RegistrationScreen/defaultProfilePicture.png",
+          }
+        }
+        style={
+          Object {
+            "height": 140,
+            "width": 140,
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "marginBottom": 40,
+          "width": 280,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "marginBottom": 25,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#F2D750",
+              "fontFamily": "JosefinSans-Light",
+              "fontSize": 14,
+            }
+          }
+        >
+          Full name:
+        </Text>
+        <View
+          style={
+            Object {
+              "paddingLeft": 5,
+            }
+          }
+        >
+          <TextInput
+            allowFontScaling={true}
+            keyboardType="default"
+            rejectResponderTermination={true}
+            style={
+              Object {
+                "color": "#F2E6C2",
+                "fontFamily": "JosefinSans-Regular",
+                "fontSize": 18,
+              }
+            }
+            underlineColorAndroid="#F2D750"
+            value="Nikhil Raina"
+          />
+        </View>
+      </View>
+      <View>
+        <Text
+          style={
+            Object {
+              "color": "#F2D750",
+              "fontFamily": "JosefinSans-Light",
+              "fontSize": 14,
+            }
+          }
+        >
+          Contact Number:
+        </Text>
+        <View
+          style={
+            Object {
+              "paddingLeft": 5,
+            }
+          }
+        >
+          <TextInput
+            allowFontScaling={true}
+            keyboardType="numeric"
+            rejectResponderTermination={true}
+            style={
+              Object {
+                "color": "#F2E6C2",
+                "fontFamily": "JosefinSans-Regular",
+                "fontSize": 18,
+              }
+            }
+            underlineColorAndroid="#F2D750"
+            value="1234567890"
+          />
+        </View>
+      </View>
+    </View>
+    <View>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#F2E6C2",
+              "fontFamily": "JosefinSans-Regular",
+              "fontSize": 18,
+            },
+            Object {
+              "borderBottomColor": "#F2E6C2",
+              "borderBottomWidth": 1,
+              "fontFamily": "JosefinSans-SemiBold",
+              "fontSize": 20,
+            },
+          ]
+        }
+      >
+        NEXT
+      </Text>
+    </View>
+  </View>
+</View>
+`;

@@ -14,7 +14,7 @@ exports[`Rendering basic demo screen renders correctly 1`] = `
   <Image
     source={
       Object {
-        "testUri": "../../../assets/images/HomeScreen/Welcome_Screen_Background.png",
+        "testUri": "../../../assets/images/WelcomeScreen/background/drawable-hdpi/welcomeScreen-background.png",
       }
     }
     style={
@@ -60,7 +60,7 @@ exports[`Rendering basic demo screen renders correctly 1`] = `
       <Image
         source={
           Object {
-            "testUri": "../../../assets/images/HomeScreen/Welcome_Screen_LOGO.png",
+            "testUri": "../../../assets/images/WelcomeScreen/welcomeScreen-logo.png",
           }
         }
         style={
