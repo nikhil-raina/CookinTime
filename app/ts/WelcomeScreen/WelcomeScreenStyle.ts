@@ -25,28 +25,16 @@ export default StyleSheet.create({
 
   },
 
-  logoContainer: {
-    borderRadius: 25,
-    ...Platform.select({
-      ios: {
-        shadowColor: '#000',
-        shadowOffset: {
-          width: 0,
-          height: 2,
-        },
-        shadowOpacity: 0.8,
-        shadowRadius: 5,
-      },
-      android: {
-        elevation: 20,
-      },
-    }),
-  },
-
   logoStyle: {
     height: 110,
     width: 110,
     borderRadius: 25,
+  },
+
+  logoStyleShadow: {
+    alignItems: 'center',
+    height: 135,
+    width: 135,
   },
 
   headerTextContainer: {

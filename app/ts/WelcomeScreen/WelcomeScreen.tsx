@@ -22,18 +22,20 @@ export default class HomeScreen extends React.Component<{}, {}> {
   }
 
   render(): React.ReactElement {
-    const background_image = images.welcomeBackground;
-    const logo_image = images.logoBackground;
+    const background_image = images.WELCOME_BACKGROUND;
+    const logo_image = images.LOGO;
+    const logo_image_shadow = images.LOGO_SHADOW;
     const appName = 'COOKIN TIME';
     const motoMessage = 'make food wait for you';
     return (
       <ImageBackground  source={background_image}
                         style={styles.backgroundImage}>
         <View style={styles.container}>
-          <View style={styles.logoContainer}>
-            <Image  source={logo_image}
-                    style={styles.logoStyle}/>
-          </View>
+            <ImageBackground  source={logo_image_shadow}
+                              style={styles.logoStyleShadow}>
+              <Image  source={logo_image}
+                      style={styles.logoStyle}/>
+            </ImageBackground>
           <Text style={styles.headerTextContainer}>
             {appName}
           </Text>

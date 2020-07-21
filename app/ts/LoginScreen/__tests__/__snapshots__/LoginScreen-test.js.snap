@@ -2,130 +2,361 @@
 
 exports[`Rendering basic demo screen renders correctly 1`] = `
 <View
-  onLayout={[Function]}
+  accessibilityIgnoresInvertColors={true}
   style={
-    Array [
-      Object {
-        "alignItems": "center",
-        "backgroundColor": "#F2E6C2",
-        "flex": 1,
-        "justifyContent": "center",
-      },
-      Object {
-        "paddingBottom": 0,
-      },
-    ]
+    Object {
+      "backgroundColor": "rgba(0,0,0,0.6)",
+      "height": 1334,
+      "width": 750,
+    }
   }
 >
+  <Image
+    source={
+      Object {
+        "testUri": "../../../assets/images/LoginScreen/drawable-hdpi/LoginScreen_Background.png",
+      }
+    }
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {
+          "height": 1334,
+          "width": 750,
+        },
+        undefined,
+      ]
+    }
+  />
   <View
     style={
       Object {
-        "flex": 0.5,
-        "width": 300,
+        "alignItems": "center",
       }
     }
   >
     <Text
       style={
         Object {
-          "fontSize": 38,
-          "fontWeight": "600",
-          "padding": 10,
-          "textAlign": "center",
+          "color": "#F2E6C2",
+          "fontFamily": "JosefinSans-Medium",
+          "fontSize": 34,
+          "marginBottom": 60,
+          "paddingTop": 60,
         }
       }
     >
-      Enter Username below to get some Info on the Candidate
+      Kitchen awaits you!!
     </Text>
-  </View>
-  <View
-    style={
-      Object {
-        "flex": 0.15,
-      }
-    }
-  >
-    <Text
-      style={
-        Object {
-          "fontSize": 20,
-          "paddingBottom": 10,
-        }
-      }
-    >
-      Username:
-    </Text>
-    <TextInput
-      allowFontScaling={true}
-      clearButtonMode="always"
-      onChangeText={[Function]}
-      placeholder="Candidate's username"
-      rejectResponderTermination={true}
-      style={
-        Object {
-          "borderColor": "#454E59",
-          "borderWidth": 1,
-          "fontSize": 16,
-          "padding": 8,
-          "width": 300,
-        }
-      }
-      underlineColorAndroid="transparent"
-    />
-  </View>
-  <View
-    style={
-      Object {
-        "backgroundColor": "#D6D011",
-        "borderRadius": 10,
-        "borderWidth": 1.5,
-        "height": 50,
-        "justifyContent": "center",
-        "width": 200,
-      }
-    }
-  >
     <View
-      accessibilityRole="button"
-      accessibilityState={Object {}}
-      accessible={true}
-      focusable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "opacity": 1,
+          "alignItems": "center",
+          "marginBottom": 30,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#F2E6C2",
+            "fontFamily": "JosefinSans-Light",
+            "fontSize": 18,
+          }
+        }
+      >
+        To get a personalized experience, 
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#F2E6C2",
+            "fontFamily": "JosefinSans-Light",
+            "fontSize": 18,
+          }
+        }
+      >
+        please sign in with:
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "marginBottom": 50,
+          "width": 230,
         }
       }
     >
       <View
         style={
-          Array [
-            Object {},
-          ]
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          accessibilityIgnoresInvertColors={true}
+          style={
+            Object {
+              "alignItems": "center",
+              "height": 75,
+              "width": 75,
+            }
+          }
+        >
+          <Image
+            source={
+              Object {
+                "testUri": "../../../assets/images/LoginScreen/drawable-hdpi/LoginScreen-Facebook_LogoShadow.png",
+              }
+            }
+            style={
+              Array [
+                Object {
+                  "bottom": 0,
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                },
+                Object {
+                  "height": 75,
+                  "width": 75,
+                },
+                undefined,
+              ]
+            }
+          />
+          <Image
+            source={
+              Object {
+                "testUri": "../../../assets/images/LoginScreen/LoginScreen-Facebook_Logo.png",
+              }
+            }
+            style={
+              Object {
+                "height": 60,
+                "width": 60,
+              }
+            }
+          />
+        </View>
+        <Text
+          style={
+            Object {
+              "color": "#F2E6C2",
+              "fontFamily": "JosefinSans-Light",
+              "fontSize": 10,
+            }
+          }
+        >
+          Facebook
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          accessibilityIgnoresInvertColors={true}
+          style={
+            Object {
+              "alignItems": "center",
+              "height": 75,
+              "width": 75,
+            }
+          }
+        >
+          <Image
+            source={
+              Object {
+                "testUri": "../../../assets/images/LoginScreen/drawable-hdpi/LoginScreen-Gmail_LogoShadow.png",
+              }
+            }
+            style={
+              Array [
+                Object {
+                  "bottom": 0,
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                },
+                Object {
+                  "height": 75,
+                  "width": 75,
+                },
+                undefined,
+              ]
+            }
+          />
+          <Image
+            source={
+              Object {
+                "testUri": "../../../assets/images/LoginScreen/LoginScreen-Gmail_Logo.png",
+              }
+            }
+            style={
+              Object {
+                "height": 60,
+                "width": 60,
+              }
+            }
+          />
+        </View>
+        <Text
+          style={
+            Object {
+              "color": "#F2E6C2",
+              "fontFamily": "JosefinSans-Light",
+              "fontSize": 10,
+            }
+          }
+        >
+          Google
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          accessibilityIgnoresInvertColors={true}
+          style={
+            Object {
+              "alignItems": "center",
+              "height": 75,
+              "width": 75,
+            }
+          }
+        >
+          <Image
+            source={
+              Object {
+                "testUri": "../../../assets/images/LoginScreen/drawable-hdpi/LoginScreen-Email_LogoShadow.png",
+              }
+            }
+            style={
+              Array [
+                Object {
+                  "bottom": 0,
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                },
+                Object {
+                  "height": 75,
+                  "width": 75,
+                },
+                undefined,
+              ]
+            }
+          />
+          <Image
+            source={
+              Object {
+                "testUri": "../../../assets/images/LoginScreen/LoginScreen-Email_Logo.png",
+              }
+            }
+            style={
+              Object {
+                "height": 60,
+                "width": 60,
+              }
+            }
+          />
+        </View>
+        <Text
+          style={
+            Object {
+              "color": "#F2E6C2",
+              "fontFamily": "JosefinSans-Light",
+              "fontSize": 10,
+            }
+          }
+        >
+          Email
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#F2E6C2",
+            "fontFamily": "JosefinSans-Light",
+            "fontSize": 10,
+          }
+        }
+      >
+        By continuing, you accept our
+      </Text>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
         }
       >
         <Text
           style={
-            Array [
-              Object {
-                "color": "#007AFF",
-                "fontSize": 18,
-                "margin": 8,
-                "textAlign": "center",
-              },
-              Object {
-                "color": "#0F0403",
-              },
-            ]
+            Object {
+              "color": "#F2E6C2",
+              "fontFamily": "JosefinSans-Light",
+              "fontSize": 10,
+              "fontWeight": "bold",
+              "textDecorationLine": "underline",
+            }
           }
         >
-          Get Info
+          Privacy Notices
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": "#F2E6C2",
+              "fontFamily": "JosefinSans-Light",
+              "fontSize": 10,
+            }
+          }
+        >
+           and 
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": "#F2E6C2",
+              "fontFamily": "JosefinSans-Light",
+              "fontSize": 10,
+              "fontWeight": "bold",
+              "textDecorationLine": "underline",
+            }
+          }
+        >
+          Terms of Use
         </Text>
       </View>
     </View>
