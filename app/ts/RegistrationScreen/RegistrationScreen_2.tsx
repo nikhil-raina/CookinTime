@@ -44,7 +44,7 @@ export default class RegistrationScreen_2 extends React.Component<{}, {}> {
               <View style={styles.replyTextContainer}>
                 <TextInput  keyboardType={'default'}
                             style={styles.textStyle}
-                            underlineColorAndroid={'#F2E6C2'}
+                            underlineColorAndroid={'#F2D750'}
                             value={'Nikhil Raina'}/>
               </View>
             </View>
@@ -55,13 +55,13 @@ export default class RegistrationScreen_2 extends React.Component<{}, {}> {
               <View style={styles.replyTextContainer}>
                 <TextInput  keyboardType={'numeric'}
                             style={styles.textStyle}
-                            underlineColorAndroid={'#F2E6C2'}
+                            underlineColorAndroid={'#F2D750'}
                             value={'1234567890'}/>
               </View>
             </View>
           </View>
           <View>
-            <Text style={[styles.textStyle, {fontFamily: 'JosefinSans-SemiBold', fontSize: 20}]}>
+            <Text style={[styles.textStyle, styles.buttonTextStyle]}>
               {'NEXT'}
             </Text>
           </View>

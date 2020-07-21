@@ -56,8 +56,12 @@ export default StyleSheet.create({
     fontFamily: 'JosefinSans-Regular',
     fontSize: 18,
     color: '#F2E6C2',
-    
   },
 
-
+  buttonTextStyle: {
+    borderBottomWidth: 1,
+    borderBottomColor: '#F2E6C2',
+    fontFamily: 'JosefinSans-SemiBold',
+    fontSize: 20,
+  },
 });
