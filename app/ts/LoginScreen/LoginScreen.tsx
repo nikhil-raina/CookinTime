@@ -53,28 +53,31 @@ export default class LoginScreen extends React.Component<{}, {}> {
             Try using the Touchable Opacity. After clicking them, they need
             to go to the respective ways of logging into the app. */}
             <View style={styles.imageContainer}>
-              <View style={styles.dropShadow}>
-                <Image  source={facebookLogo}
-                        style={styles.logoStyle}/>
-              </View>
+                <ImageBackground  source={facebookLogoShadow}
+                                  style={styles.logoStyleShadow}>
+                  <Image  source={facebookLogo}
+                          style={styles.logoStyle}/>
+                </ImageBackground>
               <Text style={styles.logoTextContainer}>
                 {'Facebook'}
               </Text>
             </View>
             <View style={styles.imageContainer}>
-              <View style={styles.dropShadow}>
+              <ImageBackground  source={googleLogoShadow}
+                                style={styles.logoStyleShadow}>
                 <Image  source={googleLogo}
                         style={styles.logoStyle}/>
-              </View>
+              </ImageBackground>
               <Text style={styles.logoTextContainer}>
                 {'Google'}
               </Text>
             </View>
             <View style={styles.imageContainer}>
-              <View style={styles.dropShadow}>
+              <ImageBackground  source={emailLogoShadow}
+                                style={styles.logoStyleShadow}>
                 <Image  source={emailLogo}
                         style={styles.logoStyle}/>
-              </View>
+              </ImageBackground>
               <Text style={styles.logoTextContainer}>
                 {'Email'}
               </Text>

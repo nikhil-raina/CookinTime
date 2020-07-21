@@ -34,8 +34,11 @@ export default class RegistrationScreen_2 extends React.Component<{}, {}> {
                         style={styles.backgroundImage}>
         <View style={styles.container}>
           <View style={styles.imageContainer}>
-            <Image  source={defaultProfilePicture}
-                    style={styles.logoStyle}/>
+            <ImageBackground source={defaultProfilePictureShadow}
+                              style={styles.logoStyleShadow}>
+              <Image  source={defaultProfilePicture}
+                      style={styles.logoStyle}/>
+            </ImageBackground>
           </View>
           <View style={styles.credentialsContainer}>
             <View style={styles.nameContainer}>

@@ -7,7 +7,6 @@
 import {
   StyleSheet,
   Dimensions,
-  Platform,
 } from 'react-native';
 
 
@@ -40,26 +39,15 @@ export default StyleSheet.create({
     color: '#F2E6C2',
   },
 
-  dropShadow: {
-    ...Platform.select({
-      ios: {
-        shadowColor: '#000',
-        shadowOffset: {
-          width: 0,
-          height: 2,
-        },
-        shadowOpacity: 0.8,
-        shadowRadius: 5,
-      },
-      android: {
-        elevation: 20,
-      },
-    }),
-  },
-
   logoStyle: {
     height: 60,
     width: 60,
+  },
+
+  logoStyleShadow: {
+    alignItems: 'center',
+    height: 75,
+    width: 75,
   },
 
   headerTextContainer: {

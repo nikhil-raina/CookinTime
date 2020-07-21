@@ -27,6 +27,12 @@ export default StyleSheet.create({
     width: 140,
   },
 
+  logoStyleShadow: {
+    alignItems: 'center',
+    height: 160,
+    width: 150,
+  },
+
   imageContainer: {
     marginTop: 70,
     marginBottom: 30,
