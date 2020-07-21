@@ -24,8 +24,9 @@ export default class RegistrationScreen_2 extends React.Component<{}, {}> {
   }
 
   render(): React.ReactElement {
-    const background_image = images.registration_background;
-    const defaultProfilePicture = images.default_profile_picture;
+    const background_image = images.REGISTRATION_BACKGROUND;
+    const defaultProfilePicture = images.REGISTRATION_DEFAULT_PROFILE_PICTURE;
+    const defaultProfilePictureShadow = images.REGISTRATION_DEFAULT_PROFILE_PICTURE_SHADOW;
     const nameText = 'Full name:';
     const contactText = 'Contact Number:';
     return (

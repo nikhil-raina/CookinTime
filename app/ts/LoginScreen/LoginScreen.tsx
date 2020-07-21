@@ -23,10 +23,13 @@ export default class LoginScreen extends React.Component<{}, {}> {
   }
 
   render(): React.ReactElement {
-    const background_image = images.login_background;
-    const facebookLogo = images.login_facebook_logo;
-    const emailLogo = images.login_email_logo;
-    const googleLogo = images.login_google_logo;
+    const background_image = images.LOGIN_BACKGROUND;
+    const facebookLogo = images.LOGIN_FACEBOOK_LOGO;
+    const facebookLogoShadow = images.LOGIN_FACEBOOK_LOGO_SHADOW;
+    const emailLogo = images.LOGIN_EMAIL_LOGO;
+    const emailLogoShadow = images.LOGIN_EMAIL_LOGO_SHADOW;
+    const googleLogo = images.LOGIN_GOOGLE_LOGO;
+    const googleLogoShadow = images.LOGIN_GOOGLE_LOGO_SHADOW;
     const headerDialogue = 'Kitchen awaits you!!';
     const firstLineMessage = 'To get a personalized experience, ';
     const secondLineMessage = 'please sign in with:';

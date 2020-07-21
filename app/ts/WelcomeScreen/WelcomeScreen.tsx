@@ -22,8 +22,8 @@ export default class HomeScreen extends React.Component<{}, {}> {
   }
 
   render(): React.ReactElement {
-    const background_image = images.welcomeBackground;
-    const logo_image = images.logoBackground;
+    const background_image = images.WELCOME_BACKGROUND;
+    const logo_image = images.LOGO;
     const appName = 'COOKIN TIME';
     const motoMessage = 'make food wait for you';
     return (
