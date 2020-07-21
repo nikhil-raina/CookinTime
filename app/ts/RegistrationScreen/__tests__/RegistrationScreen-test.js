@@ -2,11 +2,11 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import RegistrationScreen_2 from '../RegistrationScreen_2';
+import RegistrationScreen from '../RegistrationScreen';
 
 describe('Rendering basic demo screen', () => {
   it('renders correctly', () => {
-    const screen = renderer.create(<RegistrationScreen_2 />);
+    const screen = renderer.create(<RegistrationScreen />);
 
     expect(screen.toJSON()).toMatchSnapshot();
   });

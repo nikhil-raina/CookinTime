@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 /**
- * @provideModule RegistrationScreenStyle_2
+ * @provideModule RegistrationScreenStyle
  * @flow
  */
 
@@ -51,7 +51,12 @@ export default StyleSheet.create({
     color: '#F2D750',
     fontFamily: 'JosefinSans-Light',
     fontSize: 14,
+  },
 
+  headerText: {
+    color: '#F2D750',
+    fontFamily: 'JosefinSans-Regular',
+    fontSize: 24,
   },
 
   nameContainer: {
