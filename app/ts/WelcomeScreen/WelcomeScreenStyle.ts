@@ -4,10 +4,10 @@
  * @flow
  */
 
+import pogoTheme  from '../../assets/theme/pogo';
+import tronTheme from '../../assets/theme/tron';
 import {
   StyleSheet,
-  Dimensions,
-  Platform,
 } from 'react-native';
 
 
@@ -19,10 +19,7 @@ export default StyleSheet.create({
   },
 
   backgroundImage: {
-    height: Dimensions.get('window').height,
-    width: Dimensions.get('window').width,
-    backgroundColor: 'rgba(0,0,0,0.6)',
-
+    ...tronTheme.defaultBackgroundImage,
   },
 
   logoStyle: {
@@ -38,16 +35,16 @@ export default StyleSheet.create({
   },
 
   headerTextContainer: {
-    fontFamily: 'JosefinSans-Medium',
-    fontSize: 40,
-    color: '#F2E6C2',
-    marginTop: 50,
+    ...tronTheme.font.medium,
+    ...tronTheme.text.mainHeader,
+    ...pogoTheme.LIGHT_YELLOW,
+    marginTop: 40,
   },
 
   motoTextContainer: {
-    fontFamily: 'JosefinSans-Light',
-    fontSize: 22,
-    color: '#F2E6C2',
+    ...tronTheme.font.light,
+    ...tronTheme.text.subHeader,
+    ...pogoTheme.LIGHT_YELLOW,
     marginBottom: 80,
   },
 });

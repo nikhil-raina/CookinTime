@@ -9,6 +9,7 @@
 import React from 'react';
 import styles from './RegistrationScreenStyle';
 import images from '../CIT-Modules/ImageTree';
+import pogoTheme  from '../../assets/theme/pogo';
 
 import {
   View,
@@ -51,7 +52,7 @@ export default class RegistrationScreen extends React.Component<{}, State> {
               <TextInput  keyboardType={'email-address'}
                           style={styles.textStyle}
                           autoCompleteType={'email'}
-                          underlineColorAndroid={'#F2D750'}
+                          underlineColorAndroid={pogoTheme.LIGHT_YELLOW.color}
                           value={'Nikhil Raina'}/>
             </View>
           </View>
@@ -63,7 +64,7 @@ export default class RegistrationScreen extends React.Component<{}, State> {
               <TextInput  keyboardType={'default'}
                           secureTextEntry={true}
                           style={styles.textStyle}
-                          underlineColorAndroid={'#F2D750'}
+                          underlineColorAndroid={pogoTheme.LIGHT_YELLOW.color}
                           value={'password'}/>
             </View>
           </View>
@@ -75,7 +76,7 @@ export default class RegistrationScreen extends React.Component<{}, State> {
               <TextInput  keyboardType={'default'}
                           secureTextEntry={true}
                           style={styles.textStyle}
-                          underlineColorAndroid={'#F2D750'}
+                          underlineColorAndroid={pogoTheme.LIGHT_YELLOW.color}
                           value={'password'}/>
             </View>
           </View>
@@ -111,7 +112,7 @@ export default class RegistrationScreen extends React.Component<{}, State> {
             <View style={styles.replyTextContainer}>
               <TextInput  keyboardType={'default'}
                           style={styles.textStyle}
-                          underlineColorAndroid={'#F2D750'}
+                          underlineColorAndroid={pogoTheme.LIGHT_YELLOW.color}
                           value={'Nikhil Raina'}/>
             </View>
           </View>
@@ -122,7 +123,7 @@ export default class RegistrationScreen extends React.Component<{}, State> {
             <View style={styles.replyTextContainer}>
               <TextInput  keyboardType={'numeric'}
                           style={styles.textStyle}
-                          underlineColorAndroid={'#F2D750'}
+                          underlineColorAndroid={pogoTheme.LIGHT_YELLOW.color}
                           value={'1234567890'}/>
             </View>
           </View>

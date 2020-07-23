@@ -4,9 +4,10 @@
  * @flow
  */
 
+import pogoTheme  from '../../assets/theme/pogo';
+import tronTheme from '../../assets/theme/tron';
 import {
   StyleSheet,
-  Dimensions,
 } from 'react-native';
 
 
@@ -16,10 +17,7 @@ export default StyleSheet.create({
   },
 
   backgroundImage: {
-    height: Dimensions.get('window').height,
-    width: Dimensions.get('window').width,
-    backgroundColor: 'rgba(0,0,0,0.6)',
-
+    ...tronTheme.defaultBackgroundImage,
   },
 
   logosContainer: {
@@ -34,9 +32,9 @@ export default StyleSheet.create({
   },
 
   logoTextContainer: {
-    fontFamily: 'JosefinSans-Light',
-    fontSize: 10,
-    color: '#F2E6C2',
+    ...pogoTheme.LIGHT_YELLOW,
+    ...tronTheme.text.logoHeader,
+    ...tronTheme.font.light,
   },
 
   logoStyle: {
@@ -51,10 +49,10 @@ export default StyleSheet.create({
   },
 
   headerTextContainer: {
+    ...tronTheme.font.medium,
+    ...tronTheme.text.secondaryHeader,
+    ...pogoTheme.LIGHT_YELLOW,
     paddingTop: 60,
-    fontFamily: 'JosefinSans-Medium',
-    fontSize: 34,
-    color: '#F2E6C2',
     marginBottom: 60,
   },
 
@@ -68,22 +66,22 @@ export default StyleSheet.create({
   },
 
   otherTextContainer: {
-    fontFamily: 'JosefinSans-Light',
-    fontSize: 10,
-    color: '#F2E6C2',
+    ...tronTheme.font.light,
+    ...tronTheme.text.logoHeader,
+    ...pogoTheme.LIGHT_YELLOW,
   },
 
   termsAndConditionsTextContainer: {
-    fontFamily: 'JosefinSans-Light',
-    fontSize: 10,
-    color: '#F2E6C2',
+    ...tronTheme.font.light,
+    ...pogoTheme.LIGHT_YELLOW,
+    ...tronTheme.text.logoHeader,
     fontWeight: 'bold',
     textDecorationLine: 'underline',
   },
 
   inLineTextContainer: {
-    fontFamily: 'JosefinSans-Light',
-    fontSize: 18,
-    color: '#F2E6C2',
+    ...tronTheme.font.light,
+    ...tronTheme.text.subHeaderDetail,
+    ...pogoTheme.LIGHT_YELLOW,
   },
 });

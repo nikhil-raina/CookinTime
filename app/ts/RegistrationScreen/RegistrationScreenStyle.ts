@@ -4,9 +4,10 @@
  * @flow
  */
 
+import pogoTheme  from '../../assets/theme/pogo';
+import tronTheme from '../../assets/theme/tron';
 import {
   StyleSheet,
-  Dimensions,
 } from 'react-native';
 
 
@@ -17,9 +18,7 @@ export default StyleSheet.create({
   },
 
   backgroundImage: {
-    height: Dimensions.get('window').height,
-    width: Dimensions.get('window').width,
-    backgroundColor: 'rgba(0,0,0,0.6)',
+    ...tronTheme.defaultBackgroundImage,
   },
 
   logoStyle: {
@@ -48,15 +47,15 @@ export default StyleSheet.create({
   },
 
   credentialHeaderText: {
-    color: '#F2D750',
-    fontFamily: 'JosefinSans-Light',
-    fontSize: 14,
+    ...pogoTheme.YELLOW,
+    ...tronTheme.font.light,
+    ...tronTheme.text.primaryText,
   },
 
   headerText: {
-    color: '#F2D750',
-    fontFamily: 'JosefinSans-Regular',
-    fontSize: 24,
+    ...pogoTheme.YELLOW,
+    ...tronTheme.font.reg,
+    ...tronTheme.text.ternaryHeader,
   },
 
   nameContainer: {
@@ -64,15 +63,15 @@ export default StyleSheet.create({
   },
 
   textStyle: {
-    fontFamily: 'JosefinSans-Regular',
-    fontSize: 18,
-    color: '#F2E6C2',
+    ...tronTheme.font.reg,
+    ...tronTheme.text.subHeaderDetail,
+    ...pogoTheme.LIGHT_YELLOW,
   },
 
   buttonTextStyle: {
     borderBottomWidth: 1,
-    borderBottomColor: '#F2E6C2',
-    fontFamily: 'JosefinSans-SemiBold',
-    fontSize: 20,
+    borderBottomColor: pogoTheme.LIGHT_YELLOW.color,
+    ...tronTheme.text.subHeader,
+    ...tronTheme.font.semiBold,
   },
 });
