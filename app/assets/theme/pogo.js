@@ -7,11 +7,11 @@
 const pogoTheme = {
 
   LIGHT_GREY: {
-    color: '#797F8C',
+    color: '#646C7A',
   },
 
   DARK_GREY: {
-    color: '#454E59',
+    color: '#353D47',
   },
 
   YELLOW: {
@@ -23,7 +23,7 @@ const pogoTheme = {
   },
 
   WHITE: {
-    color: '#F2F2F2',
+    color: '#EFEFEF',
   },
 };
 
