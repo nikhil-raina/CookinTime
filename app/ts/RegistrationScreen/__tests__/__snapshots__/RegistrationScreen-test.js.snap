@@ -45,32 +45,67 @@ exports[`Rendering basic demo screen renders correctly 1`] = `
     <View
       style={
         Object {
+          "marginBottom": 30,
+          "marginTop": 70,
+        }
+      }
+    >
+      <View
+        accessibilityIgnoresInvertColors={true}
+        style={
+          Object {
+            "alignItems": "center",
+            "height": 160,
+            "width": 150,
+          }
+        }
+      >
+        <Image
+          source={
+            Object {
+              "testUri": "../../../assets/images/RegistrationScreen/drawable-hdpi/RegistrationScreen-ProfilePictureShadow.png",
+            }
+          }
+          style={
+            Array [
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              Object {
+                "height": 160,
+                "width": 150,
+              },
+              undefined,
+            ]
+          }
+        />
+        <Image
+          source={
+            Object {
+              "testUri": "../../../assets/images/RegistrationScreen/RegistrationScreen-ProfilePicture.png",
+            }
+          }
+          style={
+            Object {
+              "height": 140,
+              "width": 140,
+            }
+          }
+        />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
           "marginBottom": 40,
           "width": 280,
         }
       }
     >
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "marginBottom": 55,
-            "marginTop": 80,
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#F2D750",
-              "fontFamily": "JosefinSans-Regular",
-              "fontSize": 24,
-            }
-          }
-        >
-          Sign Up
-        </Text>
-      </View>
       <View
         style={
           Object {
@@ -87,7 +122,7 @@ exports[`Rendering basic demo screen renders correctly 1`] = `
             }
           }
         >
-          E-mail:
+          Full name:
         </Text>
         <View
           style={
@@ -98,8 +133,7 @@ exports[`Rendering basic demo screen renders correctly 1`] = `
         >
           <TextInput
             allowFontScaling={true}
-            autoCompleteType="email"
-            keyboardType="email-address"
+            keyboardType="default"
             rejectResponderTermination={true}
             style={
               Object {
@@ -113,48 +147,6 @@ exports[`Rendering basic demo screen renders correctly 1`] = `
           />
         </View>
       </View>
-      <View
-        style={
-          Object {
-            "marginBottom": 25,
-          }
-        }
-      >
-        <Text
-          style={
-            Object {
-              "color": "#F2D750",
-              "fontFamily": "JosefinSans-Light",
-              "fontSize": 14,
-            }
-          }
-        >
-          Password:
-        </Text>
-        <View
-          style={
-            Object {
-              "paddingLeft": 5,
-            }
-          }
-        >
-          <TextInput
-            allowFontScaling={true}
-            keyboardType="default"
-            rejectResponderTermination={true}
-            secureTextEntry={true}
-            style={
-              Object {
-                "color": "#F2E6C2",
-                "fontFamily": "JosefinSans-Regular",
-                "fontSize": 18,
-              }
-            }
-            underlineColorAndroid="#F2D750"
-            value="password"
-          />
-        </View>
-      </View>
       <View>
         <Text
           style={
@@ -165,7 +157,7 @@ exports[`Rendering basic demo screen renders correctly 1`] = `
             }
           }
         >
-          Re-enter Password:
+          Contact Number:
         </Text>
         <View
           style={
@@ -176,9 +168,8 @@ exports[`Rendering basic demo screen renders correctly 1`] = `
         >
           <TextInput
             allowFontScaling={true}
-            keyboardType="default"
+            keyboardType="numeric"
             rejectResponderTermination={true}
-            secureTextEntry={true}
             style={
               Object {
                 "color": "#F2E6C2",
@@ -187,7 +178,7 @@ exports[`Rendering basic demo screen renders correctly 1`] = `
               }
             }
             underlineColorAndroid="#F2D750"
-            value="password"
+            value="1234567890"
           />
         </View>
       </View>
@@ -210,7 +201,7 @@ exports[`Rendering basic demo screen renders correctly 1`] = `
           ]
         }
       >
-        NEXT
+        ENTER
       </Text>
     </View>
   </View>
