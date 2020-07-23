@@ -142,7 +142,7 @@ exports[`Rendering basic demo screen renders correctly 1`] = `
                 "fontSize": 18,
               }
             }
-            underlineColorAndroid="#F2D750"
+            underlineColorAndroid="#F2E6C2"
             value="Nikhil Raina"
           />
         </View>
@@ -177,7 +177,7 @@ exports[`Rendering basic demo screen renders correctly 1`] = `
                 "fontSize": 18,
               }
             }
-            underlineColorAndroid="#F2D750"
+            underlineColorAndroid="#F2E6C2"
             value="1234567890"
           />
         </View>

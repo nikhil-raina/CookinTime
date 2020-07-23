@@ -46,7 +46,7 @@ exports[`Rendering basic demo screen renders correctly 1`] = `
         Object {
           "color": "#F2E6C2",
           "fontFamily": "JosefinSans-Medium",
-          "fontSize": 34,
+          "fontSize": 32,
           "marginBottom": 60,
           "paddingTop": 60,
         }

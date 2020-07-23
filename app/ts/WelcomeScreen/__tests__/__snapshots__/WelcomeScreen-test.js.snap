@@ -96,8 +96,8 @@ exports[`Rendering basic demo screen renders correctly 1`] = `
         Object {
           "color": "#F2E6C2",
           "fontFamily": "JosefinSans-Medium",
-          "fontSize": 40,
-          "marginTop": 50,
+          "fontSize": 36,
+          "marginTop": 40,
         }
       }
     >
@@ -108,7 +108,7 @@ exports[`Rendering basic demo screen renders correctly 1`] = `
         Object {
           "color": "#F2E6C2",
           "fontFamily": "JosefinSans-Light",
-          "fontSize": 22,
+          "fontSize": 20,
           "marginBottom": 80,
         }
       }
