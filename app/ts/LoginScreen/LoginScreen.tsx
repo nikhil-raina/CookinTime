@@ -22,6 +22,8 @@ export default class LoginScreen extends React.Component<{}, {}> {
     super(props);
   }
 
+  // TODO: Need to change this to the new Login Screen that Jessy will be giving.
+
   render(): React.ReactElement {
     const background_image = images.LOGIN_BACKGROUND;
     const facebookLogo = images.LOGIN_FACEBOOK_LOGO;
