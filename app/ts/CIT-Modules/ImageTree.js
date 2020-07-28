@@ -27,6 +27,13 @@ const images = {
   REGISTRATION_DEFAULT_PROFILE_PICTURE_SHADOW: require('../../assets/images/RegistrationScreen/drawable-hdpi/RegistrationScreen-ProfilePictureShadow.png'),
   REGISTRATION_BACKGROUND: require('../../assets/images/RegistrationScreen/drawable-hdpi/RegistrationScreen-Background.png'),
 
+  // Main Screen Images
+  MAIN_COOKBOOK_ICON: require('../../assets/images/MainScreen/MainScreen-CookBook_Icon.png'),
+  MAIN_SAVE_ICON: require('../../assets/images/MainScreen/MainScreen-Save_Icon.png'),
+  MAIN_SAVE_SHELL_ICON: require('../../assets/images/MainScreen/MainScreen-Save_Shell_Icon.png'),
+  MAIN_SAVE_PLATE_ICON: require('../../assets/images/MainScreen/MainScreen-Save_Plate_Icon.png'),
+  MAIN_SEARCH_GLASS_ICON: require('../../assets/images/MainScreen/MainScreen-Search_Glass_Icon.png'),
+  MAIN_SETTINGS_ICON: require('../../assets/images/MainScreen/MainScreen-Settings_Icon.png'),
 };
 
 export default images;
