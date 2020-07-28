@@ -22,9 +22,13 @@ const pogoTheme = {
     color: '#F2E6C2',
   },
 
-  WHITE: {
+  OFF_WHITE: {
     color: '#EFEFEF',
   },
+
+  WHITE: {
+    color: '#FFFFFF',
+  }
 };
 
 export default pogoTheme;
