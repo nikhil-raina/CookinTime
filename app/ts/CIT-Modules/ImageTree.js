@@ -34,7 +34,9 @@ const images = {
   MAIN_SAVE_PLATE_ICON: require('../../assets/images/MainScreen/MainScreen-Save_Plate_Icon.png'),
   MAIN_SEARCH_GLASS_ICON: require('../../assets/images/MainScreen/MainScreen-Search_Glass_Icon.png'),
   MAIN_SETTINGS_ICON: require('../../assets/images/MainScreen/MainScreen-Settings_Icon.png'),
+  MAIN_LOGO_ICON: require('../../assets/images/MainScreen/MainScreen-Logo_Icon.png'),
   fried: require('../../assets/images/MainScreen/fried-food.png'),
+
 };
 
 export default images;
