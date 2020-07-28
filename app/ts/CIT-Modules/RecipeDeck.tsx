@@ -5,12 +5,10 @@
  */
 
 import React from 'react';
-import RecipeCard from '../RecipeCardModule/RecipeCard';
-import styles from './RecipeDeckStyle';
+import RecipeCard from './RecipeCardModule/RecipeCard';
 
 interface Props {
   cards: Array<RecipeCard>,
-  title: String,
 }
 
 interface State {
