@@ -31,7 +31,7 @@ export default class MainScreen extends React.Component<Props, State> {
 
   render(): React.ReactElement {
     const recipe = new CITRecipe();
-    return(
+    return (
       <View>
         <RecipeCard recipe={recipe}/>
       </View>
