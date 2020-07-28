@@ -45,6 +45,10 @@ const tronTheme = {
       fontSize: 26,
     },
 
+    screenTitles: {
+      fontSize: 24,
+    },
+
     subHeader: {
       fontSize: 20,
     },
