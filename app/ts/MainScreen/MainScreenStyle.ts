@@ -40,7 +40,7 @@ export default StyleSheet.create({
     flex: 0.2,
   },
 
-  settingsIconConatainer: {
+  settingsIconContainer: {
     flex: 0.1,
     marginRight: -10,
   },

@@ -55,7 +55,7 @@ export default class MainScreen extends React.Component<Props, State> {
           <Image  source={searchIcon}
                   style={[styles.imageStyleSecondary, {height: 20}]}/>
         </View>
-        <View style={styles.settingsIconConatainer}>
+        <View style={styles.settingsIconContainer}>
           {/* TODO: Make this clickable that would then show the settings screen */}
           <Image  source={settingsIcon}
                   style={styles.imageStyleSecondary}/>

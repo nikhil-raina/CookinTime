@@ -6,7 +6,7 @@
 
 import React from 'react';
 import RecipeCard from '../RecipeCardModule/RecipeCard';
-import style from './RecipeDeckStyle';
+import styles from './RecipeDeckStyle';
 
 interface Props {
   cards: Array<RecipeCard>,
