@@ -22,6 +22,7 @@ export default StyleSheet.create({
     alignItems: 'center',
     borderRadius: 10,
     elevation: 20,
+    shadowColor: pogoTheme.LIGHT_GREY.color,
   },
 
   contentContainer: {
@@ -43,7 +44,7 @@ export default StyleSheet.create({
   contentDetailContainer: {
     borderBottomLeftRadius: 10,
     borderBottomRightRadius: 10,
-    backgroundColor: pogoTheme.WHITE.color,
+    backgroundColor: pogoTheme.OFF_WHITE.color,
     width: 320,
     height: 50,
     flexDirection: 'row',
