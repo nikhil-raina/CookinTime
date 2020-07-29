@@ -21,5 +21,10 @@ export default class CITRecipe {
   instructions:        Array<String>;
   ingredients:         Array<String>;
 
-	constructor() {}
+	constructor(obj: object) {
+    this.id = obj.id;
+    this.recipe_title = obj.recipe_title;
+    this.cooking_time = obj.cooking_time;
+    this.title_image = obj.title_image;
+  }
 }
