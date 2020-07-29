@@ -85,6 +85,12 @@ export default class MainScreen extends React.Component<Props, State> {
       title_image: images.fried,
     };
     const recipe = new CITRecipe(recipeData);
+
+    const recipeCards = [];
+    recipeCards.push(<RecipeCard recipe={recipe}/>);
+    recipeCards.push(<RecipeCard recipe={recipe}/>);
+    recipeCards.push(<RecipeCard recipe={recipe}/>);
+
     return (
       <View style={styles.container}>
         {this._renderHeader()}
@@ -93,7 +99,8 @@ export default class MainScreen extends React.Component<Props, State> {
         <ScrollView>
           {/* TODO: Implement the recipe Deck here.
           Would need to work on the shadowing it goes about giving. */}
-          <RecipeCard recipe={recipe}/>
+          <RecipeDeck cards={recipeCards}
+                      title={'New Arrival'}/>
         </ScrollView>
         {this._renderFooter()}
       </View>
