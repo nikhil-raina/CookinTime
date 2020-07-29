@@ -78,7 +78,13 @@ export default class MainScreen extends React.Component<Props, State> {
   }
 
   render(): React.ReactElement {
-    const recipe = new CITRecipe();
+    const recipeData = {
+      recipe_title: 'Wings and Fries with Onion Rings',
+      id: 100001,
+      cooking_time: 30,
+      title_image: images.fried,
+    };
+    const recipe = new CITRecipe(recipeData);
     return (
       <View style={styles.container}>
         {this._renderHeader()}
