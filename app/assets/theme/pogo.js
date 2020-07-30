@@ -23,7 +23,7 @@ const pogoTheme = {
   },
 
   OFF_WHITE: {
-    color: '#F2F2F2',
+    color: '#F2F2F3',
   },
 
   WHITE: {
