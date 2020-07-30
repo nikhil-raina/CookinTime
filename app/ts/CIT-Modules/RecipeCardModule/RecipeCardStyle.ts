@@ -17,6 +17,21 @@ export default StyleSheet.create({
     width: 270,
     height: 230,
     marginHorizontal: 5,
+    borderRadius: 10,
+    position: 'absolute',
+    borderWidth: 0.3,
+    borderColor: pogoTheme.LIGHT_GREY.color,
+  },
+
+  surroundContainer: {},
+
+  shadowContainer: {
+    width: 270,
+    height: 233,
+    marginLeft: 9,
+    borderRadius: 10,
+    backgroundColor: pogoTheme.LIGHT_GREY.color,
+    opacity: 0.4,
   },
 
   contentContainer: {

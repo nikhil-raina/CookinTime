@@ -34,6 +34,8 @@ export default class RecipeCard extends React.Component<Props, State> {
     const cookingTimeText = this.props.recipe.cooking_time + ' - ' +
                             (this.props.recipe.cooking_time + 10) + ' min';
     return (
+      <View style={styles.surroundContainer}>
+        <View style={styles.shadowContainer}/>
         <View style={styles.container}>
           <View style={styles.contentContainer}>
             <Image  source={image}
@@ -41,13 +43,11 @@ export default class RecipeCard extends React.Component<Props, State> {
           </View>
           <View style={styles.contentDetailContainer}>
             <View style={styles.detailContainer}>
-              {/* <View> */}
-                <Text style={styles.headerTextStyle}>
-                  {this.props.recipe.recipe_title}
-                  {/* TODO: Currently has a 40 character limit. Need to find a way to
-                  make sure that the text shrinks if it exceeds the limit. */}
-                </Text>
-              {/* </View> */}
+              <Text style={styles.headerTextStyle}>
+                {this.props.recipe.recipe_title}
+                {/* TODO: Currently has a 40 character limit. Need to find a way to
+                make sure that the text shrinks if it exceeds the limit. */}
+              </Text>
               <Text style={styles.timeTextStyle}>
                 {cookingTimeText}
               </Text>
@@ -58,6 +58,7 @@ export default class RecipeCard extends React.Component<Props, State> {
                       style={styles.saveIconStyle}/>
             </View>
           </View>
+        </View>
       </View>
     );
   }
