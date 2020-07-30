@@ -11,13 +11,13 @@ import {
 
 export default class CITRecipe {
   id:                  number;
-  recipe_title:        string;
+  recipe_title:        String;
   recipe_images:       Array<Image>;
   title_image:         Image;
   cooking_time:        number;   // Minutes
   prep_time:           number;   // Minutes
   is_saved:            boolean;
-  created_at:          string;
+  created_at:          String;
   instructions:        Array<String>;
   ingredients:         Array<String>;
 
