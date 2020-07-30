@@ -21,6 +21,7 @@ export default StyleSheet.create({
   headerContainer: {
     flexDirection: 'row',
     padding: 30,
+    paddingBottom: 20,
     alignItems: 'center',
     ...pogoTheme.WHITE,
   },

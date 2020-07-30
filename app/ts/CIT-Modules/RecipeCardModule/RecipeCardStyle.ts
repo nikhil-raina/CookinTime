@@ -13,21 +13,14 @@ import {
 
 export default StyleSheet.create({
 
-  outerContainer: {
-    alignItems: 'center',
-  },
-
-  innerContainer: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 10,
-    elevation: 20,
-    shadowColor: pogoTheme.LIGHT_GREY.color,
+  container: {
+    width: 270,
+    height: 230,
+    marginHorizontal: 5,
   },
 
   contentContainer: {
-    alignContent: 'center',
-    justifyContent: 'center',
+    flex: 5,
   },
 
   headerTextStyle: {
@@ -42,22 +35,23 @@ export default StyleSheet.create({
   },
 
   contentDetailContainer: {
+    width: null,
     borderBottomLeftRadius: 10,
     borderBottomRightRadius: 10,
     backgroundColor: pogoTheme.OFF_WHITE.color,
-    width: 320,
-    height: 50,
+    flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
     paddingHorizontal: 10,
   },
 
   imageContainer: {
-    width: 320,
-    height: 200,
+    width: null,
     borderTopLeftRadius: 10,
     borderTopRightRadius: 10,
     overflow: 'hidden',
+    flex: 1,
+    resizeMode: 'cover',
   },
 
   saveIconStyle: {

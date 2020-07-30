@@ -78,17 +78,31 @@ export default class MainScreen extends React.Component<Props, State> {
   }
 
   render(): React.ReactElement {
-    const recipe = new CITRecipe();
+    const recipeData = {
+      recipe_title: 'Wings and Fries with Onion Rings',
+      id: 100001,
+      cooking_time: 30,
+      title_image: images.fried,
+    };
+    const recipe = new CITRecipe(recipeData);
+
+    const recipeCards = [];
+    recipeCards.push(<RecipeCard recipe={recipe}/>);
+    recipeCards.push(<RecipeCard recipe={recipe}/>);
+    recipeCards.push(<RecipeCard recipe={recipe}/>);
     return (
       <View style={styles.container}>
         {this._renderHeader()}
-        {/* TODO: Add the scrolling function here. Make sure that at least 8 to 12
-        decks would be available to view for the user */}
-        <ScrollView>
-          {/* TODO: Implement the recipe Deck here.
-          Would need to work on the shadowing it goes about giving. */}
-          <RecipeCard recipe={recipe}/>
-        </ScrollView>
+        {/* TODO: Make sure that at least 8 to 12 decks would be available to view for the user.
+        Need to test with 50 decks and be able to load the other few as the user keeps reaching the end.*/}
+          <ScrollView showsVerticalScrollIndicator={false}>
+            <RecipeDeck cards={recipeCards}
+                        title={'New Arrivals'}/>
+            <RecipeDeck cards={recipeCards}
+                        title={'New Arrivals'}/>
+            <RecipeDeck cards={recipeCards}
+                        title={'New Arrivals'}/>
+          </ScrollView>
         {this._renderFooter()}
       </View>
     );
