@@ -23,8 +23,10 @@ import {
 
 interface State {
   showFirstScreen: boolean,
+  username: string,
   email: string,
   password: string,
+  phoneNumber: string,
   passwordAgain: string,
 }
 
@@ -34,9 +36,11 @@ export default class RegistrationScreen extends React.Component<{}, State> {
   constructor(props: any) {
     super(props);
     this.state = {
-      showFirstScreen: true,
+      showFirstScreen: false,
       email: '',
       password: '',
+      username: '',
+      phoneNumber: '',
       passwordAgain: '',
     };
   }
@@ -59,38 +63,70 @@ export default class RegistrationScreen extends React.Component<{}, State> {
     });
   }
 
+  _setUserName(text: string) {
+    this.setState({
+      username: text,
+    });
+  }
+
+  _setPhoneNumber(text: string) {
+    this.setState({
+      phoneNumber: text,
+    });
+  }
+
   _firstCheckScreen = () => {
     // TODO: Need to create modals here to show that something was invalid.
+    const fail = setTimeout(() => {
+      Keyboard.dismiss();
+      console.log('being 1 called');
+      this.setState({
+        email: '',
+        password: '',
+        passwordAgain: '',
+      });
+    }, 150);  // The delay is for it to look realistically smooth
+
     if (!this._isEmailValid()) {
       console.log('Email Not Valid');
-      setTimeout(() => {
-        Keyboard.dismiss();
-        this.setState({
-          email: '',
-          password: '',
-          passwordAgain: '',
-        });
-      }, 150);  // The delay is for it to look realistically smooth
+      fail;
     } else if (!this._isPasswordSame()) {
       console.log('Password is not the same');
-      setTimeout(() => {
-        Keyboard.dismiss();
-        this.setState({
-          password: '',
-          passwordAgain: '',
-        });
-      }, 150);  // The delay is for it to look realistically smooth
+      fail;
     } else {
-      console.log('All is Valid');
+      console.log('All First is Valid');
       this.setState({
         showFirstScreen: false,
       });
     }
   }
 
+  _secondCheckScreen = () => {
+    // TODO: Need to create modals here to show that something was invalid.
+    const fail = setTimeout(() => {
+      Keyboard.dismiss();
+      console.log('being 2 called');
+      this.setState({
+        email: '',
+        password: '',
+        passwordAgain: '',
+      });
+    }, 150);  // The delay is for it to look realistically smooth
+    if (!this._isUsernameValid()) {
+      console.log('Username Not Valid');
+      fail;
+    } else if (isNaN(parseInt(this.state.phoneNumber))) {
+      console.log('Phone number Not Valid');
+      fail;
+    } else {
+      console.log('All Second is Valid');
+      // TODO: Navigate to Main Screen
+    }
+  }
+
   _isUsernameValid() {
     // eslint-disable-next-line no-useless-escape
-    return !/[~` !#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?]/g.test(this.state.email);
+    return !/[~` !#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?]/g.test(this.state.username);
   }
 
   _isEmailValid() {
@@ -124,7 +160,7 @@ export default class RegistrationScreen extends React.Component<{}, State> {
                           autoCompleteType={'email'}
                           underlineColorAndroid={pogoTheme.LIGHT_YELLOW.color}
                           onChangeText={(value) => this._setEmail(value)}
-                          placeholder={'Ex. Bob Bobby'}
+                          placeholder={'Ex. BobBobby@hungry.com'}
                           value={this.state.email}
                           placeholderTextColor={'white'}/>
             </View>
@@ -179,6 +215,7 @@ export default class RegistrationScreen extends React.Component<{}, State> {
     return (
       <View style={styles.container}>
         <View style={styles.imageContainer}>
+          {/* TODO: Make the image clickable so that one could add an image to their profile and edit it. */}
           <ImageBackground  source={defaultProfilePictureShadow}
                             style={styles.logoStyleShadow}>
             <Image  source={defaultProfilePicture}
@@ -194,7 +231,10 @@ export default class RegistrationScreen extends React.Component<{}, State> {
               <TextInput  keyboardType={'default'}
                           style={styles.textStyle}
                           underlineColorAndroid={pogoTheme.LIGHT_YELLOW.color}
-                          value={'Nikhil Raina'}/>
+                          onChangeText={(value) => this._setUserName(value)}
+                          value={this.state.username}
+                          placeholder={'Ex. Bob Bobby'}
+                          placeholderTextColor={'white'}/>
             </View>
           </View>
           <View>
@@ -205,14 +245,19 @@ export default class RegistrationScreen extends React.Component<{}, State> {
               <TextInput  keyboardType={'numeric'}
                           style={styles.textStyle}
                           underlineColorAndroid={pogoTheme.LIGHT_YELLOW.color}
-                          value={'1234567890'}/>
+                          onChangeText={(value) => this._setPhoneNumber(value)}
+                          value={this.state.phoneNumber}
+                          placeholder={'123456789'}
+                          placeholderTextColor={'white'}/>
             </View>
           </View>
         </View>
         <View>
-          <Text style={[styles.textStyle, styles.buttonTextStyle]}>
-            {'ENTER'}
-          </Text>
+          <TouchableOpacity onPress={this._secondCheckScreen}>
+            <Text style={[styles.textStyle, styles.buttonTextStyle]}>
+              {'ENTER'}
+            </Text>
+          </TouchableOpacity>
         </View>
       </View>
     );
