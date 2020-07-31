@@ -8,7 +8,8 @@ import App from './App';
 import LoginScreen from './ts/LoginScreen/LoginScreen';
 import RegistrationScreen from './ts/RegistrationScreen/RegistrationScreen';
 import WelcomeScreen from './ts/WelcomeScreen/WelcomeScreen';
+import SignInScreen from './ts/SignInScreen/SignInScreen.tsx';
 import MainScreen from './ts/MainScreen/MainScreen';
 import {name as appName} from './app.json';
 
-AppRegistry.registerComponent(appName, () => MainScreen);
+AppRegistry.registerComponent(appName, () => RegistrationScreen);

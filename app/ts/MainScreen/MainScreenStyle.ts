@@ -14,7 +14,7 @@ import {
 export default StyleSheet.create({
 
   container: {
-    backgroundColor: pogoTheme.WHITE.color,
+    backgroundColor: pogoTheme.OFF_WHITE.color,
     flex: 1,
   },
 
