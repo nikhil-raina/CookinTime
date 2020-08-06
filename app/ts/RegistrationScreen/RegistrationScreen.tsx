@@ -36,7 +36,7 @@ export default class RegistrationScreen extends React.Component<{}, State> {
   constructor(props: any) {
     super(props);
     this.state = {
-      showFirstScreen: false,
+      showFirstScreen: true,
       email: '',
       password: '',
       username: '',
