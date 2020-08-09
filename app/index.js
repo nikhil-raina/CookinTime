@@ -12,4 +12,4 @@ import SignInScreen from './ts/SignInScreen/SignInScreen.tsx';
 import MainScreen from './ts/MainScreen/MainScreen';
 import {name as appName} from './app.json';
 
-AppRegistry.registerComponent(appName, () => RegistrationScreen);
+AppRegistry.registerComponent(appName, () => App);

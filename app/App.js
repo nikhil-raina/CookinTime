@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
@@ -6,109 +7,57 @@
  * @flow strict-local
  */
 
-import React from 'react';
+import React, { Component } from 'react';
 import {
   SafeAreaView,
   StyleSheet,
   ScrollView,
   View,
+  Button,
   Text,
   StatusBar,
 } from 'react-native';
 
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+//Navigation
+import { createStackNavigator } from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 
-const App: () => React$Node = () => {
-  return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <Header />
-          {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
-            </View>
-          )}
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits.
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
-              <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-              <Text style={styles.sectionDescription}>
-                <DebugInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View>
-            <LearnMoreLinks />
-          </View>
-        </ScrollView>
-      </SafeAreaView>
-    </>
-  );
-};
+//Screens
+import LoginScreen from './ts/LoginScreen/LoginScreen';
+import WelcomeScreen from './ts/WelcomeScreen/WelcomeScreen';
+import SignInScreen from './ts/SignInScreen/SignInScreen';
+import RegistrationScreen from './ts/RegistrationScreen/RegistrationScreen';
+import MainScreen from './ts/MainScreen/MainScreen';
 
-const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: Colors.lighter,
-  },
-  engine: {
-    position: 'absolute',
-    right: 0,
-  },
-  body: {
-    backgroundColor: Colors.white,
-  },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: Colors.black,
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
-  },
-});
+const Drawer = createDrawerNavigator();
+const Stack = createStackNavigator();
+const MaterTopTabs = createMaterialTopTabNavigator();
 
-export default App;
+export default class App extends Component {
+
+  createMainDrawerStack = () =>
+  <Drawer.Navigator>
+    <Drawer.Screen name="Welcome" component={WelcomeScreen}/>
+    <Drawer.Screen name="Login" component={LoginScreen}/>
+    <Drawer.Screen name="Sign In" component={SignInScreen}/>
+    <Drawer.Screen name="Registration" component={RegistrationScreen}/>
+    <Drawer.Screen name="Main" component={MainScreen}/>
+  </Drawer.Navigator>;
+
+  render() {
+    return (
+      <NavigationContainer>
+        <Stack.Navigator  initialRouteName="Welcome"
+                          headerMode="none">
+          <Stack.Screen name="Welcome" component={WelcomeScreen}/>
+          <Stack.Screen name="Login" component={LoginScreen} />
+          <Stack.Screen name="Sign In" component={SignInScreen}/>
+          <Stack.Screen name="Registration" component={RegistrationScreen}/>
+          <Stack.Screen name="Main" children={this.createMainDrawerStack}/>
+        </Stack.Navigator>
+      </NavigationContainer>
+    );
+  }
+}
