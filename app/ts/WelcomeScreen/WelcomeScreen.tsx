@@ -13,7 +13,6 @@ import {
   Image,
   Text,
   ImageBackground,
-  Button,
   TouchableOpacity,
 } from 'react-native';
 // import { TouchableOpacity } from 'react-native-gesture-handler';
@@ -28,6 +27,10 @@ export default class HomeScreen extends React.Component<Props, {}> {
     super(props);
   }
 
+  _navigation = () => {
+    this.props.navigation.navigate('Login');
+  }
+
   render(): React.ReactElement {
     const background_image = images.WELCOME_BACKGROUND;
     const logo_image = images.LOGO;
@@ -36,27 +39,24 @@ export default class HomeScreen extends React.Component<Props, {}> {
     const motoMessage = 'make food wait for you';
     console.log('the props',this.props.navigation);
     return (
-      <ImageBackground  source={background_image}
-                        style={styles.backgroundImage}>
-        <View style={styles.container}>
-            <ImageBackground  source={logo_image_shadow}
-                              style={styles.logoStyleShadow}>
-              <Image  source={logo_image}
-                      style={styles.logoStyle}/>
-            </ImageBackground>
-          <Text style={styles.headerTextContainer}>
-            {appName}
-          </Text>
-          <Text style={styles.motoTextContainer}>
-            {motoMessage}
-          </Text>
-          <TouchableOpacity onPress={this.props.navigation.navigate('Login')}>
-            <Text>
-              {'tsting testing'}
+      <TouchableOpacity onPress={this._navigation}>
+        <ImageBackground  source={background_image}
+                          style={styles.backgroundImage}>
+          <View style={styles.container}>
+              <ImageBackground  source={logo_image_shadow}
+                                style={styles.logoStyleShadow}>
+                <Image  source={logo_image}
+                        style={styles.logoStyle}/>
+              </ImageBackground>
+            <Text style={styles.headerTextContainer}>
+              {appName}
             </Text>
-          </TouchableOpacity>
-        </View>
-      </ImageBackground>
+            <Text style={styles.motoTextContainer}>
+              {motoMessage}
+            </Text>
+          </View>
+        </ImageBackground>
+      </TouchableOpacity>
     );
   }
 }
