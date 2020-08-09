@@ -13,9 +13,16 @@ import {
   Image,
   Text,
   ImageBackground,
+  Button,
+  TouchableOpacity,
 } from 'react-native';
+// import { TouchableOpacity } from 'react-native-gesture-handler';
+import { ReactPropTypes } from 'react';
 
-export default class HomeScreen extends React.Component<{}, {}> {
+interface Props {
+  navigation: ReactPropTypes,
+}
+export default class HomeScreen extends React.Component<Props, {}> {
 
   constructor(props: any) {
     super(props);
@@ -27,6 +34,7 @@ export default class HomeScreen extends React.Component<{}, {}> {
     const logo_image_shadow = images.LOGO_SHADOW;
     const appName = 'COOKIN TIME';
     const motoMessage = 'make food wait for you';
+    console.log('the props',this.props.navigation);
     return (
       <ImageBackground  source={background_image}
                         style={styles.backgroundImage}>
@@ -42,6 +50,11 @@ export default class HomeScreen extends React.Component<{}, {}> {
           <Text style={styles.motoTextContainer}>
             {motoMessage}
           </Text>
+          <TouchableOpacity onPress={this.props.navigation.navigate('Login')}>
+            <Text>
+              {'tsting testing'}
+            </Text>
+          </TouchableOpacity>
         </View>
       </ImageBackground>
     );
