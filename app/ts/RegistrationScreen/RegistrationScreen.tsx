@@ -212,10 +212,10 @@ export default class RegistrationScreen extends React.Component<{}, State> {
     const defaultProfilePictureShadow = images.REGISTRATION_DEFAULT_PROFILE_PICTURE_SHADOW;
     const nameText = 'Full name:';
     const contactText = 'Contact Number:';
+    /* TODO: Make the image clickable so that one could add an image to their profile and edit it. */
     return (
       <View style={styles.container}>
         <View style={styles.imageContainer}>
-          {/* TODO: Make the image clickable so that one could add an image to their profile and edit it. */}
           <ImageBackground  source={defaultProfilePictureShadow}
                             style={styles.logoStyleShadow}>
             <Image  source={defaultProfilePicture}
