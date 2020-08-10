@@ -65,7 +65,7 @@ export default StyleSheet.create({
   textStyle: {
     ...tronTheme.font.reg,
     ...tronTheme.text.subHeaderDetail,
-    ...pogoTheme.LIGHT_YELLOW,
+    ...pogoTheme.YELLOW,
   },
 
   buttonTextStyle: {

@@ -28,7 +28,7 @@ export default class HomeScreen extends React.Component<Props, {}> {
   }
 
   _navigation = () => {
-    this.props.navigation.navigate('Login');
+    this.props.navigation.navigate('Sign In');
   }
 
   render(): React.ReactElement {
