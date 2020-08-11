@@ -62,7 +62,7 @@ export default class LoginScreen extends React.Component<Props, State> {
   }
 
   _isLoginSuccess = () => {
-    
+    this.props.navigation.navigate('Main');
 
   }
 
