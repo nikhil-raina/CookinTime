@@ -37,7 +37,6 @@ export default class HomeScreen extends React.Component<Props, {}> {
     const logo_image_shadow = images.LOGO_SHADOW;
     const appName = 'COOKIN TIME';
     const motoMessage = 'make food wait for you';
-    console.log('the props',this.props.navigation);
     return (
       <TouchableOpacity onPress={this._navigation}>
         <ImageBackground  source={background_image}
