@@ -38,7 +38,8 @@ const MaterTopTabs = createMaterialTopTabNavigator();
 export default class App extends Component {
 
   createMainDrawerStack = () =>
-  <Drawer.Navigator>
+  <Drawer.Navigator initialRouteName="Welcome"
+                    drawerPosition="right">
     <Drawer.Screen name="Welcome" component={WelcomeScreen}/>
     <Drawer.Screen name="Login" component={LoginScreen}/>
     <Drawer.Screen name="Sign In" component={SignInScreen}/>
