@@ -14,8 +14,7 @@ import {
 export default StyleSheet.create({
   container: {
     alignItems: 'center',
-    paddingLeft: 30,
-    paddingRight: 60,
+    paddingHorizontal: 30,
     paddingBottom: 20,
   },
 
