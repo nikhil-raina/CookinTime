@@ -5,106 +5,133 @@
  * @flow
  */
 
-import React from 'react';
+import React, { ReactPropTypes } from 'react';
 import styles from './LoginScreenStyle';
 import images from '../CIT-Modules/ImageTree';
+import pogoTheme from '../../assets/theme/pogo';
+import CheckBox from '@react-native-community/checkbox';
 
 import {
   View,
-  Image,
+  TextInput,
   Text,
   ImageBackground,
+  TouchableOpacity,
 } from 'react-native';
 
-export default class LoginScreen extends React.Component<{}, {}> {
+interface State {
+  email: string,
+  password: string,
+  checkBox: boolean,
+}
+
+interface Props {
+  navigation: ReactPropTypes,
+}
+export default class LoginScreen extends React.Component<Props, State> {
 
   constructor(props: any) {
     super(props);
+    this.state = {
+      email: '',
+      password: '',
+      checkBox: false,
+    };
   }
 
-  // TODO: Need to change this to the new Login Screen that Jessy will be giving.
+  _setEmail(value: string) {
+    this.setState({
+      email: value,
+    });
+  }
+
+  _onChange(tick: boolean) {
+    this.setState({
+      checkBox: tick,
+    });
+  }
+
+  _setPassword(value: string) {
+    this.setState({
+      password: value,
+    });
+  }
+
+  _navigation = () => {
+    this.props.navigation.navigate('Sign In');
+  }
+
+  _isLoginSuccess = () => {
+    this.props.navigation.navigate('Main');
+
+  }
 
   render(): React.ReactElement {
-    const background_image = images.LOGIN_BACKGROUND;
-    const facebookLogo = images.LOGIN_FACEBOOK_LOGO;
-    const facebookLogoShadow = images.LOGIN_FACEBOOK_LOGO_SHADOW;
-    const emailLogo = images.LOGIN_EMAIL_LOGO;
-    const emailLogoShadow = images.LOGIN_EMAIL_LOGO_SHADOW;
-    const googleLogo = images.LOGIN_GOOGLE_LOGO;
-    const googleLogoShadow = images.LOGIN_GOOGLE_LOGO_SHADOW;
-    const headerDialogue = 'Kitchen awaits you!!';
-    const firstLineMessage = 'To get a personalized experience, ';
-    const secondLineMessage = 'please sign in with:';
+    const background_image = images.REGISTRATION_BACKGROUND;
+    const emailText = 'E-mail:';
+    const pwdText = 'Password:';
     return (
       <ImageBackground  source={background_image}
                         style={styles.backgroundImage}>
         <View style={styles.container}>
-          <Text style={styles.headerTextContainer}>
-            {headerDialogue}
-          </Text>
-          <View style={styles.messageContainer}>
-            <Text style={styles.inLineTextContainer}>
-              {firstLineMessage}
-            </Text>
-            <Text style={styles.inLineTextContainer}>
-              {secondLineMessage}
-            </Text>
-          </View>
-          <View style={styles.logosContainer}>
-            {/* TODO: Make these Logos clickable.
-            Try using the Touchable Opacity. After clicking them, they need
-            to go to the respective ways of logging into the app. */}
-            <View style={styles.imageContainer}>
-                <ImageBackground  source={facebookLogoShadow}
-                                  style={styles.logoStyleShadow}>
-                  <Image  source={facebookLogo}
-                          style={styles.logoStyle}/>
-                </ImageBackground>
-              <Text style={styles.logoTextContainer}>
-                {'Facebook'}
+          <View style={styles.credentialsContainer}>
+            <View style={{alignItems: 'center', marginTop: 80, marginBottom: 55}}>
+              <Text style={styles.headerText}>
+                {'Log In'}
               </Text>
             </View>
-            <View style={styles.imageContainer}>
-              <ImageBackground  source={googleLogoShadow}
-                                style={styles.logoStyleShadow}>
-                <Image  source={googleLogo}
-                        style={styles.logoStyle}/>
-              </ImageBackground>
-              <Text style={styles.logoTextContainer}>
-                {'Google'}
+            <View style={styles.nameContainer}>
+              <Text style={styles.credentialHeaderText}>
+                {emailText}
               </Text>
+              <View style={styles.replyTextContainer}>
+                <TextInput  keyboardType={'email-address'}
+                            style={styles.textStyle}
+                            autoCompleteType={'email'}
+                            underlineColorAndroid={pogoTheme.LIGHT_YELLOW.color}
+                            onChangeText={(value) => this._setEmail(value)}
+                            placeholder={' example@123.com'}
+                            value={this.state.email}
+                            placeholderTextColor={pogoTheme.PLACEHOLDER_YELLOW.color}/>
+              </View>
             </View>
-            <View style={styles.imageContainer}>
-              <ImageBackground  source={emailLogoShadow}
-                                style={styles.logoStyleShadow}>
-                <Image  source={emailLogo}
-                        style={styles.logoStyle}/>
-              </ImageBackground>
-              <Text style={styles.logoTextContainer}>
-                {'Email'}
+            <View style={styles.nameContainer}>
+              <Text style={styles.credentialHeaderText}>
+                {pwdText}
               </Text>
+              <View style={styles.replyTextContainer}>
+                <TextInput  keyboardType={'default'}
+                            secureTextEntry={true}
+                            style={styles.textStyle}
+                            underlineColorAndroid={pogoTheme.LIGHT_YELLOW.color}
+                            onChangeText={(value) => this._setPassword(value)}
+                            value={this.state.password}
+                            placeholderTextColor={pogoTheme.LIGHT_YELLOW.color}/>
+              </View>
             </View>
           </View>
-          <View style={styles.termsAndConditionsContainer}>
-            <Text style={styles.otherTextContainer}>
-              {'By continuing, you accept our'}
+        </View>
+        <View style={{ paddingHorizontal: 60}}>
+          <TouchableOpacity style={{justifyContent: 'flex-end', alignItems: 'flex-end'}}>
+            <Text style={styles.footerTextStyle}>
+              {'Forgot Password?'}
             </Text>
-            <View style={{flexDirection:'row'}}>
-              <Text style={styles.termsAndConditionsTextContainer}>
-                {/* TODO: Need to make this as a hyperlink that takes the user to the
-                Document that goes about showing the Privacy Notices */}
-                {'Privacy Notices'}
-              </Text>
-              <Text style={styles.otherTextContainer}>
-                {' and '}
-              </Text>
-              <Text style={styles.termsAndConditionsTextContainer}>
-                {/* TODO: Need to make this as a hyperlink that takes the user to the
-                Document that goes about showing the Terms of Use */}
-                {'Terms of Use'}
-              </Text>
-            </View>
+          </TouchableOpacity>
+          <View style={{flexDirection: 'row', alignItems: 'center', marginBottom: 10}}>
+            <CheckBox disabled={false}
+                      value={this.state.checkBox}
+                      onValueChange={(check) => this._onChange(check)}
+                      tintColors={{true: pogoTheme.LIGHT_YELLOW.color, false: pogoTheme.YELLOW.color}}/>
+            <Text style={styles.footerTextStyle}>
+              {'Remember me'}
+            </Text>
           </View>
+          <TouchableOpacity onPress={this._isLoginSuccess}
+                            style={{alignItems: 'center'}}>
+            <Text style={[styles.textStyle, styles.buttonTextStyle]}>
+              {'NEXT'}
+            </Text>
+          </TouchableOpacity>
         </View>
       </ImageBackground>
     );

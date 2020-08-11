@@ -28,6 +28,10 @@ const pogoTheme = {
 
   WHITE: {
     color: '#FFFFFF',
+  },
+
+  PLACEHOLDER_YELLOW: {
+    color: '#a69d83',
   }
 };
 

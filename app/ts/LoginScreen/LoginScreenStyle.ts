@@ -20,68 +20,64 @@ export default StyleSheet.create({
     ...tronTheme.defaultBackgroundImage,
   },
 
-  logosContainer: {
-    width: 230,
-    flexDirection: 'row',
-    marginBottom: 50,
-  },
-
-  imageContainer: {
-    alignItems: 'center',
-    flex: 1,
-  },
-
-  logoTextContainer: {
-    ...pogoTheme.LIGHT_YELLOW,
-    ...tronTheme.text.logoHeader,
-    ...tronTheme.font.light,
-  },
-
   logoStyle: {
-    height: 60,
-    width: 60,
+    height: 140,
+    width: 140,
   },
 
   logoStyleShadow: {
     alignItems: 'center',
-    height: 75,
-    width: 75,
+    height: 160,
+    width: 150,
   },
 
-  headerTextContainer: {
-    ...tronTheme.font.medium,
-    ...tronTheme.text.secondaryHeader,
-    ...pogoTheme.LIGHT_YELLOW,
-    paddingTop: 60,
-    marginBottom: 60,
-  },
-
-  messageContainer: {
-    alignItems: 'center',
+  imageContainer: {
+    marginTop: 70,
     marginBottom: 30,
   },
 
-  termsAndConditionsContainer: {
-    alignItems: 'center',
+  credentialsContainer: {
+    marginBottom: 10,
+    width: 280,
   },
 
-  otherTextContainer: {
-    ...tronTheme.font.light,
-    ...tronTheme.text.logoHeader,
-    ...pogoTheme.LIGHT_YELLOW,
+  replyTextContainer: {
+    paddingLeft: 5,
   },
 
-  termsAndConditionsTextContainer: {
+  credentialHeaderText: {
+    ...pogoTheme.YELLOW,
     ...tronTheme.font.light,
-    ...pogoTheme.LIGHT_YELLOW,
-    ...tronTheme.text.logoHeader,
-    fontWeight: 'bold',
-    textDecorationLine: 'underline',
+    ...tronTheme.text.primaryText,
   },
 
-  inLineTextContainer: {
-    ...tronTheme.font.light,
+  headerText: {
+    ...pogoTheme.YELLOW,
+    ...tronTheme.font.reg,
+    ...tronTheme.text.ternaryHeader,
+  },
+
+  nameContainer: {
+    marginBottom: 25,
+  },
+
+  textStyle: {
+    ...tronTheme.font.reg,
     ...tronTheme.text.subHeaderDetail,
     ...pogoTheme.LIGHT_YELLOW,
+  },
+
+  footerTextStyle: {
+    ...tronTheme.font.light,
+    ...tronTheme.text.secondaryText,
+    ...pogoTheme.LIGHT_YELLOW,
+  },
+
+  buttonTextStyle: {
+    borderBottomWidth: 1,
+    ...pogoTheme.YELLOW,
+    borderBottomColor: pogoTheme.LIGHT_YELLOW.color,
+    ...tronTheme.text.subHeader,
+    ...tronTheme.font.semiBold,
   },
 });

@@ -45,67 +45,32 @@ exports[`Rendering basic demo screen renders correctly 1`] = `
     <View
       style={
         Object {
-          "marginBottom": 30,
-          "marginTop": 70,
-        }
-      }
-    >
-      <View
-        accessibilityIgnoresInvertColors={true}
-        style={
-          Object {
-            "alignItems": "center",
-            "height": 160,
-            "width": 150,
-          }
-        }
-      >
-        <Image
-          source={
-            Object {
-              "testUri": "../../../assets/images/RegistrationScreen/drawable-hdpi/RegistrationScreen-ProfilePictureShadow.png",
-            }
-          }
-          style={
-            Array [
-              Object {
-                "bottom": 0,
-                "left": 0,
-                "position": "absolute",
-                "right": 0,
-                "top": 0,
-              },
-              Object {
-                "height": 160,
-                "width": 150,
-              },
-              undefined,
-            ]
-          }
-        />
-        <Image
-          source={
-            Object {
-              "testUri": "../../../assets/images/RegistrationScreen/RegistrationScreen-ProfilePicture.png",
-            }
-          }
-          style={
-            Object {
-              "height": 140,
-              "width": 140,
-            }
-          }
-        />
-      </View>
-    </View>
-    <View
-      style={
-        Object {
           "marginBottom": 40,
           "width": 280,
         }
       }
     >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "marginBottom": 55,
+            "marginTop": 80,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#F2D74E",
+              "fontFamily": "JosefinSans-Regular",
+              "fontSize": 26,
+            }
+          }
+        >
+          Sign Up
+        </Text>
+      </View>
       <View
         style={
           Object {
@@ -116,13 +81,58 @@ exports[`Rendering basic demo screen renders correctly 1`] = `
         <Text
           style={
             Object {
-              "color": "#F2D750",
+              "color": "#F2D74E",
               "fontFamily": "JosefinSans-Light",
               "fontSize": 14,
             }
           }
         >
-          Full name:
+          E-mail:
+        </Text>
+        <View
+          style={
+            Object {
+              "paddingLeft": 5,
+            }
+          }
+        >
+          <TextInput
+            allowFontScaling={true}
+            autoCompleteType="email"
+            keyboardType="email-address"
+            onChangeText={[Function]}
+            placeholder="example@123.com"
+            placeholderTextColor="#a69d83"
+            rejectResponderTermination={true}
+            style={
+              Object {
+                "color": "#F2D74E",
+                "fontFamily": "JosefinSans-Regular",
+                "fontSize": 18,
+              }
+            }
+            underlineColorAndroid="#F1E5C2"
+            value=""
+          />
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "marginBottom": 25,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#F2D74E",
+              "fontFamily": "JosefinSans-Light",
+              "fontSize": 14,
+            }
+          }
+        >
+          Password:
         </Text>
         <View
           style={
@@ -134,16 +144,18 @@ exports[`Rendering basic demo screen renders correctly 1`] = `
           <TextInput
             allowFontScaling={true}
             keyboardType="default"
+            onChangeText={[Function]}
             rejectResponderTermination={true}
+            secureTextEntry={true}
             style={
               Object {
-                "color": "#F2E6C2",
+                "color": "#F2D74E",
                 "fontFamily": "JosefinSans-Regular",
                 "fontSize": 18,
               }
             }
-            underlineColorAndroid="#F2E6C2"
-            value="Nikhil Raina"
+            underlineColorAndroid="#F1E5C2"
+            value=""
           />
         </View>
       </View>
@@ -151,13 +163,13 @@ exports[`Rendering basic demo screen renders correctly 1`] = `
         <Text
           style={
             Object {
-              "color": "#F2D750",
+              "color": "#F2D74E",
               "fontFamily": "JosefinSans-Light",
               "fontSize": 14,
             }
           }
         >
-          Contact Number:
+          Re-enter Password:
         </Text>
         <View
           style={
@@ -168,41 +180,60 @@ exports[`Rendering basic demo screen renders correctly 1`] = `
         >
           <TextInput
             allowFontScaling={true}
-            keyboardType="numeric"
+            keyboardType="default"
+            onChangeText={[Function]}
             rejectResponderTermination={true}
+            secureTextEntry={true}
             style={
               Object {
-                "color": "#F2E6C2",
+                "color": "#F2D74E",
                 "fontFamily": "JosefinSans-Regular",
                 "fontSize": 18,
               }
             }
-            underlineColorAndroid="#F2E6C2"
-            value="1234567890"
+            underlineColorAndroid="#F1E5C2"
+            value=""
           />
         </View>
       </View>
     </View>
     <View>
-      <Text
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
         style={
-          Array [
-            Object {
-              "color": "#F2E6C2",
-              "fontFamily": "JosefinSans-Regular",
-              "fontSize": 18,
-            },
-            Object {
-              "borderBottomColor": "#F2E6C2",
-              "borderBottomWidth": 1,
-              "fontFamily": "JosefinSans-SemiBold",
-              "fontSize": 20,
-            },
-          ]
+          Object {
+            "opacity": 1,
+          }
         }
       >
-        ENTER
-      </Text>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#F2D74E",
+                "fontFamily": "JosefinSans-Regular",
+                "fontSize": 18,
+              },
+              Object {
+                "borderBottomColor": "#F1E5C2",
+                "borderBottomWidth": 1,
+                "fontFamily": "JosefinSans-SemiBold",
+                "fontSize": 20,
+              },
+            ]
+          }
+        >
+          NEXT
+        </Text>
+      </View>
     </View>
   </View>
 </View>

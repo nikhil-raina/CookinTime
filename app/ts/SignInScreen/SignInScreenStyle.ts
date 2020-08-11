@@ -23,7 +23,7 @@ export default StyleSheet.create({
   logosContainer: {
     width: 230,
     flexDirection: 'row',
-    marginBottom: 50,
+    marginBottom: 45,
   },
 
   imageContainer: {
@@ -51,9 +51,9 @@ export default StyleSheet.create({
   headerTextContainer: {
     ...tronTheme.font.medium,
     ...tronTheme.text.secondaryHeader,
-    ...pogoTheme.LIGHT_YELLOW,
-    paddingTop: 60,
-    marginBottom: 60,
+    ...pogoTheme.YELLOW,
+    paddingTop: 40,
+    marginBottom: 40,
   },
 
   messageContainer: {
@@ -63,6 +63,7 @@ export default StyleSheet.create({
 
   termsAndConditionsContainer: {
     alignItems: 'center',
+    marginBottom: 50,
   },
 
   otherTextContainer: {
@@ -83,5 +84,18 @@ export default StyleSheet.create({
     ...tronTheme.font.light,
     ...tronTheme.text.subHeaderDetail,
     ...pogoTheme.LIGHT_YELLOW,
+  },
+
+  textStyle: {
+    ...tronTheme.font.reg,
+    ...tronTheme.text.subHeaderDetail,
+    ...pogoTheme.YELLOW,
+  },
+
+  buttonTextStyle: {
+    borderBottomWidth: 1,
+    borderBottomColor: pogoTheme.YELLOW.color,
+    ...tronTheme.text.subHeader,
+    ...tronTheme.font.semiBold,
   },
 });

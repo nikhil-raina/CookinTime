@@ -44,11 +44,11 @@ exports[`Rendering basic demo screen renders correctly 1`] = `
     <Text
       style={
         Object {
-          "color": "#F2E6C2",
+          "color": "#F2D74E",
           "fontFamily": "JosefinSans-Medium",
           "fontSize": 32,
-          "marginBottom": 60,
-          "paddingTop": 60,
+          "marginBottom": 40,
+          "paddingTop": 40,
         }
       }
     >
@@ -65,7 +65,7 @@ exports[`Rendering basic demo screen renders correctly 1`] = `
       <Text
         style={
           Object {
-            "color": "#F2E6C2",
+            "color": "#F1E5C2",
             "fontFamily": "JosefinSans-Light",
             "fontSize": 18,
           }
@@ -76,7 +76,7 @@ exports[`Rendering basic demo screen renders correctly 1`] = `
       <Text
         style={
           Object {
-            "color": "#F2E6C2",
+            "color": "#F1E5C2",
             "fontFamily": "JosefinSans-Light",
             "fontSize": 18,
           }
@@ -89,7 +89,7 @@ exports[`Rendering basic demo screen renders correctly 1`] = `
       style={
         Object {
           "flexDirection": "row",
-          "marginBottom": 50,
+          "marginBottom": 45,
           "width": 230,
         }
       }
@@ -152,7 +152,7 @@ exports[`Rendering basic demo screen renders correctly 1`] = `
         <Text
           style={
             Object {
-              "color": "#F2E6C2",
+              "color": "#F1E5C2",
               "fontFamily": "JosefinSans-Light",
               "fontSize": 10,
             }
@@ -219,7 +219,7 @@ exports[`Rendering basic demo screen renders correctly 1`] = `
         <Text
           style={
             Object {
-              "color": "#F2E6C2",
+              "color": "#F1E5C2",
               "fontFamily": "JosefinSans-Light",
               "fontSize": 10,
             }
@@ -237,56 +237,73 @@ exports[`Rendering basic demo screen renders correctly 1`] = `
         }
       >
         <View
-          accessibilityIgnoresInvertColors={true}
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
           style={
             Object {
-              "alignItems": "center",
-              "height": 75,
-              "width": 75,
+              "opacity": 1,
             }
           }
         >
-          <Image
-            source={
-              Object {
-                "testUri": "../../../assets/images/LoginScreen/drawable-hdpi/LoginScreen-Email_LogoShadow.png",
-              }
-            }
-            style={
-              Array [
-                Object {
-                  "bottom": 0,
-                  "left": 0,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                },
-                Object {
-                  "height": 75,
-                  "width": 75,
-                },
-                undefined,
-              ]
-            }
-          />
-          <Image
-            source={
-              Object {
-                "testUri": "../../../assets/images/LoginScreen/LoginScreen-Email_Logo.png",
-              }
-            }
+          <View
+            accessibilityIgnoresInvertColors={true}
             style={
               Object {
-                "height": 60,
-                "width": 60,
+                "alignItems": "center",
+                "height": 75,
+                "width": 75,
               }
             }
-          />
+          >
+            <Image
+              source={
+                Object {
+                  "testUri": "../../../assets/images/LoginScreen/drawable-hdpi/LoginScreen-Email_LogoShadow.png",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "height": 75,
+                    "width": 75,
+                  },
+                  undefined,
+                ]
+              }
+            />
+            <Image
+              source={
+                Object {
+                  "testUri": "../../../assets/images/LoginScreen/LoginScreen-Email_Logo.png",
+                }
+              }
+              style={
+                Object {
+                  "height": 60,
+                  "width": 60,
+                }
+              }
+            />
+          </View>
         </View>
         <Text
           style={
             Object {
-              "color": "#F2E6C2",
+              "color": "#F1E5C2",
               "fontFamily": "JosefinSans-Light",
               "fontSize": 10,
             }
@@ -300,13 +317,14 @@ exports[`Rendering basic demo screen renders correctly 1`] = `
       style={
         Object {
           "alignItems": "center",
+          "marginBottom": 50,
         }
       }
     >
       <Text
         style={
           Object {
-            "color": "#F2E6C2",
+            "color": "#F1E5C2",
             "fontFamily": "JosefinSans-Light",
             "fontSize": 10,
           }
@@ -324,7 +342,7 @@ exports[`Rendering basic demo screen renders correctly 1`] = `
         <Text
           style={
             Object {
-              "color": "#F2E6C2",
+              "color": "#F1E5C2",
               "fontFamily": "JosefinSans-Light",
               "fontSize": 10,
               "fontWeight": "bold",
@@ -337,7 +355,7 @@ exports[`Rendering basic demo screen renders correctly 1`] = `
         <Text
           style={
             Object {
-              "color": "#F2E6C2",
+              "color": "#F1E5C2",
               "fontFamily": "JosefinSans-Light",
               "fontSize": 10,
             }
@@ -348,7 +366,7 @@ exports[`Rendering basic demo screen renders correctly 1`] = `
         <Text
           style={
             Object {
-              "color": "#F2E6C2",
+              "color": "#F1E5C2",
               "fontFamily": "JosefinSans-Light",
               "fontSize": 10,
               "fontWeight": "bold",
@@ -359,6 +377,55 @@ exports[`Rendering basic demo screen renders correctly 1`] = `
           Terms of Use
         </Text>
       </View>
+    </View>
+    <View>
+      <Text
+        style={
+          Object {
+            "color": "#F1E5C2",
+            "fontFamily": "JosefinSans-Light",
+            "fontSize": 18,
+          }
+        }
+      >
+        Already have an account?
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#F2D74E",
+              "fontFamily": "JosefinSans-Regular",
+              "fontSize": 18,
+            },
+            Object {
+              "borderBottomColor": "#F2D74E",
+              "borderBottomWidth": 1,
+              "fontFamily": "JosefinSans-SemiBold",
+              "fontSize": 20,
+            },
+          ]
+        }
+      >
+        Log In
+      </Text>
     </View>
   </View>
 </View>
