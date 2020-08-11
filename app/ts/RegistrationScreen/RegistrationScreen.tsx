@@ -111,9 +111,8 @@ export default class RegistrationScreen extends React.Component<Props, State> {
       Keyboard.dismiss();
       console.log('being 2 called');
       this.setState({
-        email: '',
-        password: '',
-        passwordAgain: '',
+        username: '',
+        phoneNumber: '',
       });
     }, 150);  // The delay is for it to look realistically smooth
     if (!this._isUsernameValid()) {
@@ -124,7 +123,7 @@ export default class RegistrationScreen extends React.Component<Props, State> {
       fail;
     } else {
       console.log('All Second is Valid');
-      // TODO: Navigate to Main Screen
+      this.props.navigation.navigate('Main');
     }
   }
 
@@ -210,7 +209,7 @@ export default class RegistrationScreen extends React.Component<Props, State> {
   _renderSecondScreen(): React.ReactElement {
     const defaultProfilePicture = images.REGISTRATION_DEFAULT_PROFILE_PICTURE;
     const defaultProfilePictureShadow = images.REGISTRATION_DEFAULT_PROFILE_PICTURE_SHADOW;
-    const nameText = 'Full name:';
+    const nameText = 'User name:';
     const contactText = 'Contact Number:';
     /* TODO: Make the image clickable so that one could add an image to their profile and edit it. */
     return (
