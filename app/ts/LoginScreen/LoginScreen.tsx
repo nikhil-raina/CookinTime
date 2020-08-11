@@ -92,7 +92,7 @@ export default class LoginScreen extends React.Component<Props, State> {
                             onChangeText={(value) => this._setEmail(value)}
                             placeholder={' example@123.com'}
                             value={this.state.email}
-                            placeholderTextColor={pogoTheme.LIGHT_YELLOW.color}/>
+                            placeholderTextColor={pogoTheme.PLACEHOLDER_YELLOW.color}/>
               </View>
             </View>
             <View style={styles.nameContainer}>

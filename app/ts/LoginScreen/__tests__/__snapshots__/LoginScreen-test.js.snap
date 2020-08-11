@@ -101,7 +101,7 @@ exports[`Rendering basic demo screen renders correctly 1`] = `
             keyboardType="email-address"
             onChangeText={[Function]}
             placeholder=" example@123.com"
-            placeholderTextColor="#F1E5C2"
+            placeholderTextColor="#a69d83"
             rejectResponderTermination={true}
             style={
               Object {

@@ -6,7 +6,7 @@
  * @flow
  */
 
-import React from 'react';
+import React, { ReactPropTypes } from 'react';
 import styles from './RegistrationScreenStyle';
 import images from '../CIT-Modules/ImageTree';
 import pogoTheme  from '../../assets/theme/pogo';
@@ -30,7 +30,11 @@ interface State {
   passwordAgain: string,
 }
 
-export default class RegistrationScreen extends React.Component<{}, State> {
+interface Props {
+  navigation: ReactPropTypes,
+}
+
+export default class RegistrationScreen extends React.Component<Props, State> {
 
   // TODO: Get the placeholder HEX code for all colors
   constructor(props: any) {
@@ -160,9 +164,9 @@ export default class RegistrationScreen extends React.Component<{}, State> {
                           autoCompleteType={'email'}
                           underlineColorAndroid={pogoTheme.LIGHT_YELLOW.color}
                           onChangeText={(value) => this._setEmail(value)}
-                          placeholder={'Ex. BobBobby@hungry.com'}
+                          placeholder={'example@123.com'}
                           value={this.state.email}
-                          placeholderTextColor={'white'}/>
+                          placeholderTextColor={pogoTheme.PLACEHOLDER_YELLOW.color}/>
             </View>
           </View>
           <View style={styles.nameContainer}>
@@ -175,9 +179,7 @@ export default class RegistrationScreen extends React.Component<{}, State> {
                           style={styles.textStyle}
                           underlineColorAndroid={pogoTheme.LIGHT_YELLOW.color}
                           onChangeText={(value) => this._setPassword(value)}
-                          value={this.state.password}
-                          placeholder={'Be secretive'}
-                          placeholderTextColor={'white'}/>
+                          value={this.state.password}/>
             </View>
           </View>
           <View>
@@ -190,9 +192,7 @@ export default class RegistrationScreen extends React.Component<{}, State> {
                           style={styles.textStyle}
                           underlineColorAndroid={pogoTheme.LIGHT_YELLOW.color}
                           onChangeText={(value) => this._setPasswordAgain(value)}
-                          value={this.state.passwordAgain}
-                          placeholder={'Be secretive again'}
-                          placeholderTextColor={'white'}/>
+                          value={this.state.passwordAgain}/>
             </View>
           </View>
         </View>
@@ -233,8 +233,8 @@ export default class RegistrationScreen extends React.Component<{}, State> {
                           underlineColorAndroid={pogoTheme.LIGHT_YELLOW.color}
                           onChangeText={(value) => this._setUserName(value)}
                           value={this.state.username}
-                          placeholder={'Ex. Bob Bobby'}
-                          placeholderTextColor={'white'}/>
+                          placeholder={'Example Buddy'}
+                          placeholderTextColor={pogoTheme.PLACEHOLDER_YELLOW.color}/>
             </View>
           </View>
           <View>
@@ -248,7 +248,7 @@ export default class RegistrationScreen extends React.Component<{}, State> {
                           onChangeText={(value) => this._setPhoneNumber(value)}
                           value={this.state.phoneNumber}
                           placeholder={'123456789'}
-                          placeholderTextColor={'white'}/>
+                          placeholderTextColor={pogoTheme.PLACEHOLDER_YELLOW.color}/>
             </View>
           </View>
         </View>
